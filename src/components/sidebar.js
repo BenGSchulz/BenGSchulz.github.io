@@ -2,10 +2,13 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+import Typist from "react-typist"
+
+const Sidebar = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#202228`,
+      color: `#fdfbf3`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -20,23 +23,25 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `#fdfbf3`,
             textDecoration: `none`,
           }}
         >
+        <Typist>
           {siteTitle}
+        </Typist>
         </Link>
       </h1>
     </div>
   </header>
 )
 
-Header.propTypes = {
+Sidebar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+Sidebar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Sidebar
