@@ -1,0 +1,42 @@
+.container {
+  margin: 0;
+  padding: 0;
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  font-size: auto;
+  overflow: visible;
+  z-index: 1;
+}
+
+.buttons {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.btn {
+  font-size: 100%;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.btn:hover {
+  margin-left: 10px;
+  /* font-size: 110%; */
+}
+
+.btnActive {
+  font-size: 150%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

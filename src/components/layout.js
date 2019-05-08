@@ -8,14 +8,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Sidebar from "./sidebar/sidebar"
+import Menu from "./menu/menu"
 import Content from "./content/content"
+import Header from "./header/header";
 
 const Layout = ({ children }) => (
       <>
-        <Sidebar />
+        <Header />
+        <Menu />
         <Content />
-        <main>{children}</main>
       </>
 )
 
