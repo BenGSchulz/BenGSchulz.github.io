@@ -9,10 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Sidebar from "./sidebar/sidebar"
+import Content from "./content/content"
 
 const Layout = ({ children }) => (
       <>
         <Sidebar />
+        <Content />
         <main>{children}</main>
       </>
 )
