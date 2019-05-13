@@ -4,17 +4,7 @@ html {
   height: 100%;
   color: #f2f2f2;
   font-family: 'Overpass', sans-serif;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background: '#101213';
-  background-repeat: no-repeat;
-  background: -webkit-linear-gradient( to right, #101213, #424242);
-  background: -moz-linear-gradient( to right, #101213, #424242);
-  background: -ms-linear-gradient( to right, #101213, #424242);
-  background: -o-linear-gradient( to right, #101213, #424242);
-  background: linear-gradient( to right, #101213, #424242);
+  background: #101213;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;

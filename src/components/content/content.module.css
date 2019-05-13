@@ -1,11 +1,20 @@
 .container {
-  margin-top: 20vh;
+  margin-top: 0;
   margin-left: 25vw;
   padding: 5vw;
-  width: 65vw;
-  height: 75vh;
+  /* width: 65vw; */
+  height: 100vh;
   position: fixed;
   text-align: center;
-  overflow: visible;
+  overflow-y: scroll;
   z-index: 1;
+}
+
+.item {
+  cursor: pointer;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px; 
+  background: none;
+  text-align: center;
+  user-select: none;
 }
