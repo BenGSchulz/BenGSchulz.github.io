@@ -2,11 +2,12 @@
   margin-top: 0;
   margin-left: 25vw;
   padding: 5vw;
-  /* width: 65vw; */
+  width: 75vw;
   height: 100vh;
   position: fixed;
   text-align: center;
   overflow-y: scroll;
+  box-sizing: border-box;
   z-index: 1;
 }
 

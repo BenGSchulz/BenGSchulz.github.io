@@ -22,24 +22,26 @@ items.forEach(i => {
 });
 
 const Content = (props) => {
-  let containerRef = React.createRef();
-  let containerW = 0;
+  let containerRef = React.useRef(null);
+  let ARRef = React.useRef(null);
 
+  const [containerW, setContainerW] = useState(0);
   const [itemStylesState, setItemStylesState] = useState(itemStyles);
 
   useEffect(() => {
     console.log(containerRef);
-    containerW = containerRef.current.offsetWidth;
+    console.log(ARRef);
+    setContainerW(containerRef.current.offsetWidth);
     console.log(containerW);
 
   }, []);
 
   const getAutoResponsiveProps = () => {
+    // console.log(containerW);
     return {
       itemMargin: 10,
       containerWidth: containerW,
       itemClassName: 'item',
-      gridWidth: 100,
       transitionDuration: '.5',
       transitionTimingFunction: 'easeIn'
     };
@@ -61,9 +63,8 @@ const Content = (props) => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <AutoResponsive ref={containerRef} {...getAutoResponsiveProps()}>
-
+    <div ref={containerRef} className={styles.container}>
+      <AutoResponsive ref={ARRef} {...getAutoResponsiveProps()}>
         { items.map(i => {
           return <div key={i} className={styles.item} {...itemStylesState[i]} onClick={() => handleItemClick(i)}>Item {i}</div>;
           })
