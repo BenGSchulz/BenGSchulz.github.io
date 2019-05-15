@@ -1,75 +1,25 @@
-import React, { useEffect, useCallback, useState } from "react"
-// import ReactDOM from "react-dom"
+import React, {useCallback} from "react"
 
 import styles from "./content.module.css"
 
-import AutoResponsive from "autoresponsive-react"
+import ContentItem from '../contentItem/contentItem';
 
-const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const itemSizeDefault = 200;
-let itemStyles = {};
-let getItemStyle = function() {
-  return {
-    style:{
-      width: itemSizeDefault,
-      height: itemSizeDefault
-    }
-  };
-};
+// import AutoResponsive from "autoresponsive-react"
 
-items.forEach(i => {
-  itemStyles[i] = getItemStyle();
-});
+const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Content = (props) => {
-  let containerRef = React.useRef(null);
-  let ARRef = React.useRef(null);
-
-  const [containerW, setContainerW] = useState(0);
-  const [itemStylesState, setItemStylesState] = useState(itemStyles);
-
-  useEffect(() => {
-    console.log(containerRef);
-    console.log(ARRef);
-    setContainerW(containerRef.current.offsetWidth);
-    console.log(containerW);
-
-  }, []);
-
-  const getAutoResponsiveProps = () => {
-    // console.log(containerW);
-    return {
-      itemMargin: 10,
-      containerWidth: containerW,
-      itemClassName: 'item',
-      transitionDuration: '.5',
-      transitionTimingFunction: 'easeIn'
-    };
-  };
 
   const handleItemClick = useCallback((i) => {
-    console.log('Item' + i + 'clicked');
-    console.log(itemStyles[i]);
-    console.log(itemStylesState[i]);
-    if (itemStyles[i].style.width === itemSizeDefault) {
-      itemStyles[i].style.width = itemSizeDefault * 2 + 10;
-      itemStyles[i].style.height = itemSizeDefault * 2 + 10;
-    } else {
-      itemStyles[i].style.width = itemSizeDefault;
-      itemStyles[i].style.height = itemSizeDefault;
-    }
 
-    setItemStylesState(itemStyles);
   }, []);
 
   return (
-    <div ref={containerRef} className={styles.container}>
-      <AutoResponsive ref={ARRef} {...getAutoResponsiveProps()}>
+    <div className={styles.container}>
         { items.map(i => {
-          return <div key={i} className={styles.item} {...itemStylesState[i]} onClick={() => handleItemClick(i)}>Item {i}</div>;
+          return <ContentItem key={i} content={'Item' + i} handleClick={() => handleItemClick(i)} />;
           })
         }
-      </AutoResponsive>
     </div>
   );
 };
