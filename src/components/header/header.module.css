@@ -5,6 +5,7 @@
   position: fixed;
   font-size: auto;
   overflow: visible;
+  background: #101213;
   z-index: 1;
 }
 

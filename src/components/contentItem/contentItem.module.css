@@ -12,3 +12,9 @@
   padding-bottom: 45%;
   margin: 2.5%;
 }
+
+.item:hover, .item:focus {
+  width: 49%;
+  padding-bottom: 49%;
+  margin: .5%;
+}
