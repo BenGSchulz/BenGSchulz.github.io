@@ -1,12 +1,12 @@
 .container {
   margin-top: 0;
-  margin-left: 25vw;
-  padding: 5vw;
-  width: 75vw;
+  /* margin-left: 25vw; */
+  /* padding: 5vw; */
+  padding: 5vw 5vw 5vw 25vw;
+  width: 100vw;
   height: 100vh;
-  position: fixed;
+  position: relative;
   text-align: center;
   overflow-y: scroll;
   box-sizing: border-box;
-  z-index: 1;
 }

@@ -1,6 +1,6 @@
 import React, {useCallback} from "react"
 
-import styles from "./content.module.css"
+import styles from "./contentArea.module.css"
 
 import ContentItem from '../contentItem/contentItem';
 
@@ -8,7 +8,7 @@ import ContentItem from '../contentItem/contentItem';
 
 const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const Content = (props) => {
+const ContentArea = (props) => {
 
   const handleItemClick = useCallback((i) => {
 
@@ -24,4 +24,4 @@ const Content = (props) => {
   );
 };
 
-export default Content
+export default ContentArea

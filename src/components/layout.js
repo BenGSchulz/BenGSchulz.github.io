@@ -9,14 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Menu from "./menu/menu"
-import Content from "./content/content"
+import ContentArea from "./contentArea/contentArea"
 import Header from "./header/header";
 
 const Layout = ({ children }) => (
       <>
         <Header />
         <Menu />
-        <Content />
+        <ContentArea />
       </>
 )
 

@@ -1,12 +1,11 @@
 .container {
-  padding: 0;
+  padding: 10px;
   width: 100vw;
   height: 20vh;
   position: fixed;
   font-size: auto;
   overflow: visible;
   background: #101213;
-  z-index: 1;
 }
 
 .title {

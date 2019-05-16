@@ -11,6 +11,10 @@ html {
   overflow-y: scroll;
 }
 
+body {
+  margin: 0;
+}
+
 main {
   width: auto;
   height: 100%;
