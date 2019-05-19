@@ -14,9 +14,11 @@ import Header from "./header/header";
 
 const Layout = ({ children }) => (
       <>
+      
         <Header />
         <Menu />
         <ContentArea />
+
       </>
 )
 
