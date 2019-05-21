@@ -16,8 +16,10 @@ const Layout = ({ children }) => (
       <>
       
         <Header />
-        <Menu />
+        
         <ContentArea />
+
+        <Menu />
 
       </>
 )

@@ -2,22 +2,14 @@ import React from "react"
 
 import SEO from "../components/seo"
 
+import '../styles/404.css';
+
 const NotFoundPage = () => (
-  <div 
-    style={
-      { 
-        textAlign: "center",
-        margin: 0,
-        position: 'absolute',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        width: '100%' 
-      }
-  }>
+  <div className='messageContainer'>
     <SEO title="404: Not found" />
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist :( </p>
-    <a href='/' className='link'>Home</a>
+    <a href='/' className='homeLink'>Home</a>
   </div>
 )
 

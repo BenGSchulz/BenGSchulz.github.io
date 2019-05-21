@@ -5,16 +5,15 @@
   height: 100vh;
   position: fixed;
   overflow: visible;
-  z-index: 1;
 }
 
 .buttons {
   margin: 0;
-  position: absolute;
   top: 50%;
+  position: fixed;
+  display: block;
   -ms-transform: translateY(-30%);
   transform: translateY(-30%);
-  width: 100%;
 }
 
 .btn {
@@ -31,7 +30,6 @@
 .btn:hover, .btn:focus {
   outline: 0;
   padding-left: 10px;
-  /* font-size: 110%; */
 }
 
 .btnActive {
@@ -39,6 +37,7 @@
 }
 
 ul {
+  display: block;
   list-style-type: none;
   margin: 0;
   padding: 0;

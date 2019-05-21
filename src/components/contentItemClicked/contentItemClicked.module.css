@@ -1,23 +1,40 @@
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  cursor: zoom-out;
+}
+
 .item {
-  position: relative;
+  position: fixed;
   border: 1px solid #f2f2f2;
   border-radius: 5px; 
   background: #101213;
   text-align: center;
   user-select: none;
-  display: inline-block;
   box-sizing: border-box;
-  height: 0;
-  width: 45%;
-  padding-bottom: 45%;
-  margin: 2.5%;
+  height: 90vh;
+  width: 0;
+  top: 5vh;
+  left: 50%;
+  padding-right: 50%;
+  transform: translateX(-50%);
   transition: all .5s;
+  z-index: 10;
 }
 
 .item:hover {
   outline: none;
-  cursor: zoom-in;
-  transform: scale(1.1);
+}
+
+.itemTitle {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  box-sizing: border-box;
 }
 
 .link {
@@ -31,7 +48,6 @@
   margin: 5%;
   bottom: 5%;
   transition: all .25s;
-  z-index: 2;
 }
 
 .right {
