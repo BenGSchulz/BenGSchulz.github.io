@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import styles from "./contentItem.module.css";
 
 const ContentItem = (props) => {
 
+  const thisRef = useRef(null);
+
+  const handleClick = () => {
+    if (thisRef.current) {
+      let thisItem = {
+        ...props.content,
+        itemRect: thisRef.current.getBoundingClientRect()
+      }
+      // let itemRect = thisRef.current.getBoundingClientRect();
+      // console.log(thisItem);
+      props.handleClick(thisItem);
+    } 
+  }
+
   return (
-    <div className={styles.item} onClick={props.handleClick}>
+    <div ref={thisRef} className={styles.item} onClick={handleClick}>
       <h3>{props.content.title}</h3>
       <a 
         href={props.content.link1} 

@@ -1,13 +1,13 @@
-import React, { useState, useCallback } from "react"
+import React, { useState, useCallback, useRef } from "react"
+// import { Transition } from 'react-transition-group';
 
 import styles from "./contentArea.module.css"
 
 import ContentItem from '../contentItem/contentItem';
 import ContentItemClicked from '../contentItemClicked/contentItemClicked';
 
-// import AutoResponsive from "autoresponsive-react"
-
-const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const items = [0, 1, 2, 3];
 
 const item = {
   title: 'Test Title',
@@ -17,53 +17,71 @@ const item = {
 
 const ContentArea = (props) => {
 
+  const topRef = useRef(null);
+
   const [showDetailItem, setShowDetailItem] = useState(false);
   const [detailItem, setDetailItem] = useState(item);
 
-  const handleItemClick = useCallback((i) => {
+  const handleItemClick = useCallback((inItem) => {
     // console.log('item ' + i + ' clicked');
 
-    let newItem = {
-      title: 'Clicked Item ' + i,
-      link1: item.link1,
-      link2: item.link2
-    }
-
-    setDetailItem(newItem);
+    setDetailItem(inItem);
     setShowDetailItem(true);
     
   }, []);
 
-  const handleBackgroundClick = useCallback(() => {
+  const handleDetailItemClose = useCallback(() => {
     // console.log('Background Clicked');
 
     setShowDetailItem(false);
   }, []);
 
+  const handleScrollerClick = useCallback((e) => {
+    if(topRef.current) {
+      topRef.current.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "nearest"
+     });
+    }
+  })
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.pageTitle} id='title'>My Projects</h1>
+      <h1 ref={topRef} className={styles.pageTitle}>My Projects</h1>
       { items.map(i => {
         return <ContentItem 
                   key={i} 
                   content={item} 
-                  handleClick={() => handleItemClick(i)} 
+                  handleClick={handleItemClick} 
                 />;
         })
       }
-      <a href='#title' className={styles.toTopBtn}>^</a>
-
+      <p className={styles.toTopBtn} onClick={(e) => {handleScrollerClick(e)}}>^</p>
       {
         (showDetailItem ? 
           <ContentItemClicked 
             content={detailItem} 
-            handleBackgroundClick={handleBackgroundClick}
+            handleClose={handleDetailItemClose}
           /> 
           : null)
       }
-     
     </div>
   );
 };
 
 export default ContentArea
+  // const transitionStyles = {
+  //   entering: { opacity: 0 },
+  //   entered:  { opacity: 1 },
+  //   exiting:  { opacity: 1 },
+  //   exited:  { opacity: 0 },
+  // };
+      // <Transition in={showDetailItem} timeout={500} appear unmountOnExit>
+      //   {state => (
+      //     <ContentItemClicked
+      //       style={{...transitionStyles[state]}}
+      //       content={detailItem} 
+      //       handleBackgroundClick={handleBackgroundClick}
+      //     />
+      //   )}
+      // </Transition>
