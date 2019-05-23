@@ -19,20 +19,18 @@ const ContentArea = (props) => {
 
   const topRef = useRef(null);
 
+  const [clickedIndex, setClickedIndex] = useState(-1);
   const [showDetailItem, setShowDetailItem] = useState(false);
   const [detailItem, setDetailItem] = useState(item);
 
-  const handleItemClick = useCallback((inItem) => {
-    // console.log('item ' + i + ' clicked');
-
+  const handleItemClick = useCallback((inItem, itemIndex) => {
+    setClickedIndex(itemIndex);
     setDetailItem(inItem);
     setShowDetailItem(true);
-    
   }, []);
 
   const handleDetailItemClose = useCallback(() => {
-    // console.log('Background Clicked');
-
+    setClickedIndex(-1);
     setShowDetailItem(false);
   }, []);
 
@@ -49,12 +47,15 @@ const ContentArea = (props) => {
     <div className={styles.container}>
       <h1 ref={topRef} className={styles.pageTitle}>My Projects</h1>
       { items.map(i => {
-        return <ContentItem 
-                  key={i} 
-                  content={item} 
-                  handleClick={handleItemClick} 
-                />;
-        })
+          let clicked = ((i === clickedIndex) ? true : false);
+          return <ContentItem 
+                    key={i}
+                    index={i}
+                    content={item}
+                    clicked={clicked} 
+                    handleClick={handleItemClick} 
+                  />;
+          })
       }
       <p className={styles.toTopBtn} onClick={(e) => {handleScrollerClick(e)}}>^</p>
       {

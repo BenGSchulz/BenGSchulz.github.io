@@ -11,12 +11,16 @@
   width: 45%;
   padding-bottom: 45%;
   margin: 2.5%;
-  transition: all .5s;
+  transition: all .25s;
 }
 
 .item:hover {
   outline: none;
   cursor: zoom-in;
+  transform: scale(1.1);
+}
+
+.itemClicked {
   transform: scale(1.1);
 }
 

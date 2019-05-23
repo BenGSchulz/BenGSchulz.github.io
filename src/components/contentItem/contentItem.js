@@ -4,6 +4,8 @@ import styles from "./contentItem.module.css";
 
 const ContentItem = (props) => {
 
+  const myClass = (props.clicked ? [styles.item, styles.itemClicked].join(' ') : styles.item)
+
   const thisRef = useRef(null);
 
   const handleClick = () => {
@@ -13,13 +15,13 @@ const ContentItem = (props) => {
         itemRect: thisRef.current.getBoundingClientRect()
       }
       // let itemRect = thisRef.current.getBoundingClientRect();
-      // console.log(thisItem);
-      props.handleClick(thisItem);
+      // console.log(thisItem.itemRect);
+      props.handleClick(thisItem, props.index);
     } 
   }
 
   return (
-    <div ref={thisRef} className={styles.item} onClick={handleClick}>
+    <div ref={thisRef} className={myClass} onClick={handleClick}>
       <h3>{props.content.title}</h3>
       <a 
         href={props.content.link1} 
