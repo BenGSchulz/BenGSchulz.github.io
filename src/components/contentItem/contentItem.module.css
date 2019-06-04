@@ -24,6 +24,14 @@
   transform: scale(1.1);
 }
 
+.itemTitle {
+  position: absolute;
+  right: 50%;
+  font-size: 130%;
+  transform: translateX(50%);
+  box-sizing: border-box;
+}
+
 .link {
   position: absolute;
   display: inline-block;
@@ -32,7 +40,7 @@
   padding: 1% 5% 1% 5%;
   color: #f2f2f2;
   text-decoration: none;
-  margin: 5%;
+  margin: 1% 5%;
   bottom: 5%;
   transition: all .25s;
   z-index: 2;

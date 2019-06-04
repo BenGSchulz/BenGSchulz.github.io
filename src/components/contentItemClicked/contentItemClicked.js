@@ -108,6 +108,7 @@ const ContentItemClicked = (props) => {
             <div style={{...defaultBGStyle, ...bgTransitionStyles[state]}} onClick={handleBackgroundClick}></div>
             <div ref={itemRef} style={{...defaultItemStyle, ...itemTransitionStyles[state]}}>
               <h3 className={styles.itemTitle}>{props.content.title}</h3>
+              <p className={styles.closeBtn}>X</p>
               <a 
                 href={props.content.link1} 
                 className={[styles.link, styles.left].join(' ')} 

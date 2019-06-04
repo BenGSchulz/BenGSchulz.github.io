@@ -22,7 +22,7 @@ const ContentItem = (props) => {
 
   return (
     <div ref={thisRef} className={myClass} onClick={handleClick}>
-      <h3>{props.content.title}</h3>
+      <h3 className={styles.itemTitle}>{props.content.title}</h3>
       <a 
         href={props.content.link1} 
         className={[styles.link, styles.left].join(' ')} 
