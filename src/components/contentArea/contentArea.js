@@ -6,6 +6,8 @@ import styles from "./contentArea.module.css"
 import ContentItem from '../contentItem/contentItem';
 import ContentItemClicked from '../contentItemClicked/contentItemClicked';
 
+import { FaChevronUp } from 'react-icons/fa';
+
 // const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const items = [0, 1, 2, 3];
 
@@ -57,7 +59,7 @@ const ContentArea = (props) => {
                   />;
           })
       }
-      <p className={styles.toTopBtn} onClick={(e) => {handleScrollerClick(e)}}>^</p>
+      <p className={styles.toTopBtn} onClick={(e) => {handleScrollerClick(e)}}><FaChevronUp /></p>
       {
         (showDetailItem ? 
           <ContentItemClicked 

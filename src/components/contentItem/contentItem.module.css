@@ -68,6 +68,11 @@
   .link {
    display: none;
   }
+
+  .itemClicked {
+    transform: scale(1);
+  }
+
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -77,4 +82,6 @@
 /* @media only screen and (min-width: 992px) {...}  */
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
+/* @media only screen and (max-width: 1200px) {
+
+} */
