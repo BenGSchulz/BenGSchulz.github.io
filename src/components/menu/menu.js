@@ -1,20 +1,46 @@
-import { Link } from "gatsby"
-import React from "react"
-
-import styles from "./menu.module.css"
-
+import React, { useEffect } from "react"
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaPaperPlane } from 'react-icons/fa';
+import throttle from 'lodash.throttle';
+import styles from "./menu.module.css"
 
-const Menu = () => (
+
+
+const handleNavClick = (selector) => {
+  document.querySelector('#' + selector).scrollIntoView({ 
+    behavior: 'smooth' 
+  });
+}
+
+const throttledScroll = () => {
+  console.log('scrolled');
+}
+
+const handleScroll = () => {
+  throttle(throttledScroll, 100);
+}
+
+const Menu = () => {
+
+  useEffect(() => {
+    // window.addEventListener('scroll', throttle(handleScroll, 100));
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      console.log('Returned');
+      // window.removeEventListener('scroll', throttle(handleScroll, 100));
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
     <div className={styles.container}>
       <div className={styles.buttons}>
         <ul>
-          <li><Link className={[styles.btn, styles.btnActive].join(' ')} to="/">Projects</Link></li>
-          <li><Link className={styles.btn} to="/404">Tech</Link></li>
-          <li><Link className={styles.btn} to="/">Resume</Link></li>
-          <li><Link className={styles.btn} to="/">Contact</Link></li>
+          <li><div className={styles.btn} onClick={() => {handleNavClick('Projects');}}>Projects</div></li>
+          <li><div className={styles.btn} onClick={() => {handleNavClick('Resume');}}>Resume</div></li>
+          <li><div className={styles.btn} onClick={() => {handleNavClick('About');}}>About</div></li>
           <br/>
           <br/>
           <br/>
@@ -24,6 +50,7 @@ const Menu = () => (
         </ul>
       </div>
     </div>
-)
+  );
+}
 
 export default Menu

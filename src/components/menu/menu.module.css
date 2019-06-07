@@ -30,6 +30,7 @@
 .btn:hover, .btn:focus {
   outline: 0;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .btnActive {

@@ -19,7 +19,8 @@ const item = {
 
 const ContentArea = (props) => {
 
-  const topRef = useRef(null);
+  const projectsRef = useRef(null);
+  const resumeRef = useRef(null);
 
   const [clickedIndex, setClickedIndex] = useState(-1);
   const [showDetailItem, setShowDetailItem] = useState(false);
@@ -37,8 +38,8 @@ const ContentArea = (props) => {
   }, []);
 
   const handleScrollerClick = useCallback((e) => {
-    if(topRef.current) {
-      topRef.current.scrollIntoView({ 
+    if(projectsRef.current) {
+      projectsRef.current.scrollIntoView({ 
         behavior: "smooth", 
         block: "nearest"
      });
@@ -47,7 +48,7 @@ const ContentArea = (props) => {
 
   return (
     <div className={styles.container}>
-      <h1 ref={topRef} className={styles.pageTitle}>My Projects</h1>
+      <h1 ref={projectsRef} className={styles.pageTitle} id='Projects'>My Projects</h1>
       { items.map(i => {
           let clicked = ((i === clickedIndex) ? true : false);
           return <ContentItem 
@@ -68,6 +69,14 @@ const ContentArea = (props) => {
           /> 
           : null)
       }
+      <h1 ref={resumeRef} className={styles.pageTitle} id='Resume'>My Resume</h1>
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <h1 ref={resumeRef} className={styles.pageTitle} id='About'>About Me</h1>
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
     </div>
   );
 };
