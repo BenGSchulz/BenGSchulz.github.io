@@ -1,46 +1,73 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaPaperPlane } from 'react-icons/fa';
-import throttle from 'lodash.throttle';
+import throttle from 'lodash.throttle'
 import styles from "./menu.module.css"
 
-
-
-const handleNavClick = (selector) => {
-  document.querySelector('#' + selector).scrollIntoView({ 
-    behavior: 'smooth' 
-  });
-}
-
-const throttledScroll = () => {
-  console.log('scrolled');
-}
-
-const handleScroll = () => {
-  throttle(throttledScroll, 100);
-}
+const contentElements = [];
+const navElements = [];
 
 const Menu = () => {
 
+  const [activeId, setActiveId] = useState('ProjectsNav');
+
+  const handleNavClick = (id) => {
+    document.getElementById(id).scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+    setActiveId(id + 'Nav');
+  }
+
+  const handleScroll = () => {
+    contentElements.some((el) => {
+      const boundingRect = el.getBoundingClientRect();
+      if ((boundingRect.y + boundingRect.height) > 0) {
+        setActiveId(el.id + 'Nav');
+        return true;
+      } else {
+        return false;
+      }
+    });
+  };
+  
+  const throttledScroll = throttle(handleScroll, 500);
+  
   useEffect(() => {
-    // window.addEventListener('scroll', throttle(handleScroll, 100));
-    window.addEventListener('scroll', handleScroll);
+    contentElements.push(document.getElementById('Projects'),
+                        document.getElementById('Resume'),
+                        document.getElementById('About'));
+    navElements.push(document.getElementById('ProjectsNav'),
+                        document.getElementById('ResumeNav'),
+                        document.getElementById('AboutNav'));
+
+    window.addEventListener('wheel', throttledScroll);
 
     return () => {
-      console.log('Returned');
-      // window.removeEventListener('scroll', throttle(handleScroll, 100));
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('wheel', throttledScroll);
     };
-  }, []);
+  }, [contentElements, navElements]);
 
+  useEffect(() => {
+    // console.log(activeId);
+    navElements.forEach(el => {
+      if (el.id === activeId) {
+        el.classList.add(styles.btnActive);
+      } else {
+        el.classList.remove(styles.btnActive);
+      }
+    });
+
+    document.getElementById(activeId).classList.add(styles.btnActive);
+  }, [activeId]);
+  
   return (
     <div className={styles.container}>
       <div className={styles.buttons}>
         <ul>
-          <li><div className={styles.btn} onClick={() => {handleNavClick('Projects');}}>Projects</div></li>
-          <li><div className={styles.btn} onClick={() => {handleNavClick('Resume');}}>Resume</div></li>
-          <li><div className={styles.btn} onClick={() => {handleNavClick('About');}}>About</div></li>
+          <li><div id='ProjectsNav' className={styles.btn} onClick={() => {handleNavClick('Projects');}}>Projects</div></li>
+          <li><div id='ResumeNav' className={styles.btn} onClick={() => {handleNavClick('Resume');}}>Resume</div></li>
+          <li><div id='AboutNav' className={styles.btn} onClick={() => {handleNavClick('About');}}>About</div></li>
           <br/>
           <br/>
           <br/>
