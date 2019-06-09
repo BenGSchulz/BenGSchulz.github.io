@@ -8,19 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Menu from "./menu/menu"
+import Navigation from "./navigation/navigation"
 import ContentArea from "./contentArea/contentArea"
-import Header from "./header/header";
 
 const Layout = ({ children }) => (
       <>
-      
-        <Header />
-        
         <ContentArea />
-
-        <Menu />
-
+        <Navigation />
       </>
 )
 

@@ -1,12 +1,10 @@
-import React, { useState, useCallback, useRef } from "react"
+import React, { useState, useCallback } from "react"
 // import { Transition } from 'react-transition-group';
 
 import styles from "./contentArea.module.css"
 
 import ContentItem from '../contentItem/contentItem';
 import ContentItemClicked from '../contentItemClicked/contentItemClicked';
-
-import { FaChevronUp } from 'react-icons/fa';
 
 // const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const items = [0, 1, 2, 3];
@@ -18,9 +16,6 @@ const item = {
 }
 
 const ContentArea = (props) => {
-
-  const projectsRef = useRef(null);
-  const resumeRef = useRef(null);
 
   const [clickedIndex, setClickedIndex] = useState(-1);
   const [showDetailItem, setShowDetailItem] = useState(false);
@@ -37,46 +32,42 @@ const ContentArea = (props) => {
     setShowDetailItem(false);
   }, []);
 
-  const handleScrollerClick = useCallback((e) => {
-    if(projectsRef.current) {
-      projectsRef.current.scrollIntoView({ 
-        behavior: "smooth", 
-        block: "nearest"
-     });
-    }
-  })
-
   return (
     <div className={styles.container}>
-      <h1 ref={projectsRef} className={styles.pageTitle} id='Projects'>My Projects</h1>
-      { items.map(i => {
-          let clicked = ((i === clickedIndex) ? true : false);
-          return <ContentItem 
-                    key={i}
-                    index={i}
-                    content={item}
-                    clicked={clicked} 
-                    handleClick={handleItemClick} 
-                  />;
-          })
-      }
-      <p className={styles.toTopBtn} onClick={(e) => {handleScrollerClick(e)}}><FaChevronUp /></p>
-      {
-        (showDetailItem ? 
-          <ContentItemClicked 
-            content={detailItem} 
-            handleClose={handleDetailItemClose}
-          /> 
-          : null)
-      }
-      <h1 ref={resumeRef} className={styles.pageTitle} id='Resume'>My Resume</h1>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <h1 ref={resumeRef} className={styles.pageTitle} id='About'>About Me</h1>
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-      <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <div id='Projects'>
+        <h1 className={styles.pageTitle}>Projects</h1>
+        { items.map(i => {
+            let clicked = ((i === clickedIndex) ? true : false);
+            return <ContentItem 
+                      key={i}
+                      index={i}
+                      content={item}
+                      clicked={clicked} 
+                      handleClick={handleItemClick} 
+                    />;
+            })
+        }
+        {
+          (showDetailItem ? 
+            <ContentItemClicked 
+              content={detailItem} 
+              handleClose={handleDetailItemClose}
+            /> 
+            : null)
+        }
+      </div>
+      <div id='Resume'>
+        <h1 className={styles.pageTitle}>Resume</h1>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      </div>
+      <div id='About'>
+        <h1 className={styles.pageTitle}>About</h1>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      </div>
     </div>
   );
 };
