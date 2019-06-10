@@ -1,10 +1,15 @@
 import React from "react"
+import {FaGithub, FaLinkedin, FaPaperPlane} from 'react-icons/fa'
 
 import styles from "./footer.module.css"
 
 const Footer = (props) => (
   <div className={styles.container}>
-    Content
+    <div className={styles.socialGroup}>
+      <a href='https://github.com/BenGSchulz' target='_blank' rel='noopener noreferrer' className={styles.social}><FaGithub /></a>
+      <a href='https://linkedin.com/in/BenGSchulz/' target='_blank' rel='noopener noreferrer' className={styles.social}><FaLinkedin /></a>
+      <a href='mailto:benjamin.g.schulz@gmail.com' className={styles.social}><FaPaperPlane /></a>
+    </div>
   </div>
 );
 

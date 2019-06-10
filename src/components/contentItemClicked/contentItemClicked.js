@@ -14,7 +14,7 @@ const defaultBGStyle = {
   opacity: .5,
   cursor: 'zoom-out',
   transition: 'opacity .5s',
-  zIndex: 9,
+  zIndex: 1500,
 }
 
 const bgTransitionStyles = {
@@ -41,13 +41,13 @@ const defaultItemStyle = {
   userSelect: 'none',
   boxSizing: 'border-box',
   width: 0,
-  height: '90vh',
+  height: '95vh',
   top: '5vh',
   left: '50%',
   paddingRight: '50%',
   opacity: 1,
   transition: 'all .5s',
-  zIndex: 10
+  zIndex: 2000
 };
 
 let showConditional = false;
@@ -62,20 +62,20 @@ const ContentItemClicked = (props) => {
       height: props.content.itemRect.height,
       top: props.content.itemRect.top,
       left: props.content.itemRect.left,
-      paddingRight: '35%',
+      paddingRight: '45%',
       opacity: 1
     },
     entered:  { 
-      height: '90vh',
-      top: '5vh',
+      height: '95vh',
+      top: '2.5vh',
       left: '50%',
       paddingRight: '90%',
       transform: 'translateX(-50%)', 
       opacity: 1
     },
     exiting:  { 
-      height: '90vh',
-      top: '5vh',
+      height: '95vh',
+      top: '2.5vh',
       left: '50%',
       paddingRight: '90%',
       transform: 'translateX(-50%)',
@@ -85,7 +85,7 @@ const ContentItemClicked = (props) => {
       height: props.content.itemRect.height,
       top: props.content.itemRect.top,
       left: props.content.itemRect.left,
-      paddingRight: '35%',
+      paddingRight: '45%',
       opacity: 1
     }
   };

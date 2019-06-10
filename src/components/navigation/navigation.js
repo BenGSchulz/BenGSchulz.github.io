@@ -20,7 +20,7 @@ const Navigation = () => {
   const handleScroll = () => {
     contentElements.some((el) => {
       const boundingRect = el.getBoundingClientRect();
-      if ((boundingRect.y + boundingRect.height - (window.innerHeight / 2)) > 0) {
+      if (boundingRect.y <= 0) {
         setCurrentSectionId(el.id);
         return true;
       } else {
@@ -29,12 +29,12 @@ const Navigation = () => {
     });
   };
   
-  const throttledScroll = throttle(handleScroll, 500);
+  const throttledScroll = throttle(handleScroll, 100);
   
   useEffect(() => {
-    contentElements.push(document.getElementById('Projects'),
+    contentElements.push(document.getElementById('About'),
                         document.getElementById('Resume'),
-                        document.getElementById('About'));
+                        document.getElementById('Projects'));
 
     window.addEventListener('wheel', throttledScroll);
 
@@ -46,7 +46,7 @@ const Navigation = () => {
   return (
     <div>
       <Header currentSection={currentSectionId} handleNavClick={handleNavClick}/>
-      <p className={styles.toTopBtn} onClick={() => {handleNavClick('Projects');}}><FaChevronUp /></p>
+      <span className={styles.toTopBtn} onClick={() => {handleNavClick('Projects');}}><FaChevronUp /></span>
     </div>
   );
 }

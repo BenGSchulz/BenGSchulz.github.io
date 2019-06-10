@@ -1,12 +1,48 @@
-.wrapper:hover {
+.sectionTitle {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200%;
+}
+
+.sectionTitle:hover {
   cursor: pointer;
 }
 
-.wrapper:hover > .icon {
-  padding-top: 5px;
+.sectionTitle:hover + .icon {
+  font-size: 140%;
 }
 
 .icon {
-  margin-left: 1vw;
-  font-size: 50%;
+  position: fixed;
+  top: 5%;
+  left: 55%;
+  transform: translateY(-50%);
+  font-size: 100%;
+  transition: all .25s;
+}
+
+.dropper {
+  position: fixed;
+  top: calc(10vh + 2px);
+  left: 0;
+  width: 100vw;
+  background: rgba(16, 18, 19, .7);
+  border-bottom: 2px solid #f2f2f2;
+  z-index: 2000;
+}
+
+.dropperItem {
+  width: fit-content;
+  font-size: 200%;
+  margin: 10px 46%;
+  /* border-bottom: 2px solid #f2f2f2; */
+  transition: all .25s;
+  left: 50%;
+}
+
+.dropperItem:hover {
+  cursor: pointer;
+  font-size: 220%;
 }

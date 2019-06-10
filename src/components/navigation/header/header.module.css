@@ -19,43 +19,39 @@
   font-size: 200%;
 }
 
-.drop {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  font-size: 200%;
-}
-
-ul {
-  position: absolute;
-  right: 25%;
+.socialGroup {
+  position: relative;
+  left: 95%;
   top: 50%;
-  transform: translate(50%, -50%);
-  list-style-type: none;
+  transform: translate(-100%, -50%);
   margin: 0;
   padding: 0;
-}
-
-li {
-  float: left;
-  margin-left: 10px;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 .social {
-  display: block;
-  font-size: 150%;
-  padding: 10px 5px 0 5px;
+  position: relative;
+  display: inline-block;
+  font-size: 175%;
+  line-height: 175%;
+  box-sizing: border-box;
+  padding: 10px;
   color: #f2f2f2;
   text-decoration: none;
   transition: all .25s;
   white-space: nowrap;
 }
 
+.social > svg {
+  vertical-align: middle;
+}
+
 .social:hover {
   outline: 0;
   font-size: 200%;
-  /* padding-top: 15px; */
+  line-height: 175%;
+  /* padding-bottom: 20px; */
 }
 
 @media only screen and (max-width: 700px) {
