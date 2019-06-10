@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react"
+import { FaChevronUp } from 'react-icons/fa'
 import throttle from 'lodash.throttle'
 
-import Header from './header/header'
-import Sidebar from './sidebar/sidebar'
-
 import styles from './navigation.module.css'
+import Header from './header/header'
 
 const contentElements = [];
-const navElements = [];
 
 const Navigation = () => {
   const [currentSectionId, setCurrentSectionId] = useState('Projects');
@@ -37,33 +35,18 @@ const Navigation = () => {
     contentElements.push(document.getElementById('Projects'),
                         document.getElementById('Resume'),
                         document.getElementById('About'));
-    navElements.push(document.getElementById('ProjectsNav'),
-                        document.getElementById('ResumeNav'),
-                        document.getElementById('AboutNav'));
 
     window.addEventListener('wheel', throttledScroll);
 
     return () => {
       window.removeEventListener('wheel', throttledScroll);
     };
-  }, [contentElements, navElements]);
-
-  useEffect(() => {
-    navElements.forEach(el => {
-      if (el.id === currentSectionId) {
-        el.classList.add(styles.btnActive);
-      } else {
-        el.classList.remove(styles.btnActive);
-      }
-    });
-
-    document.getElementById(currentSectionId + 'Nav').classList.add(styles.btnActive);
-  }, [currentSectionId]);
+  }, [contentElements]);
 
   return (
     <div>
       <Header currentSection={currentSectionId} handleNavClick={handleNavClick}/>
-      <Sidebar handleNavClick={handleNavClick}/>
+      <p className={styles.toTopBtn} onClick={() => {handleNavClick('Projects');}}><FaChevronUp /></p>
     </div>
   );
 }

@@ -1,0 +1,19 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 5vh;
+  bottom: 0;
+  overflow: visible;
+  font-weight: bold;
+  background: #101213;
+  border-top: 2px solid #f2f2f2;
+  z-index: 100;
+  user-select: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    display: none;
+  }
+
+} 

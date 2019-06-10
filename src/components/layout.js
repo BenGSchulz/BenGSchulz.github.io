@@ -10,11 +10,13 @@ import PropTypes from "prop-types"
 
 import Navigation from "./navigation/navigation"
 import ContentArea from "./contentArea/contentArea"
+import Footer from "./footer/footer"
 
 const Layout = ({ children }) => (
       <>
         <ContentArea />
         <Navigation />
+        <Footer />
       </>
 )
 

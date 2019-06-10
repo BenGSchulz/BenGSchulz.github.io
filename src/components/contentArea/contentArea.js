@@ -34,8 +34,8 @@ const ContentArea = (props) => {
 
   return (
     <div className={styles.container}>
-      <div id='Projects'>
-        <h1 className={styles.pageTitle}>Projects</h1>
+      <div id='Projects' className={styles.projectSection}>
+        {/* <h1 className={styles.sectionTitle}>Projects</h1> */}
         { items.map(i => {
             let clicked = ((i === clickedIndex) ? true : false);
             return <ContentItem 
@@ -56,17 +56,11 @@ const ContentArea = (props) => {
             : null)
         }
       </div>
-      <div id='Resume'>
-        <h1 className={styles.pageTitle}>Resume</h1>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <div id='Resume' style={{height: '100vh'}}>
+        <h1 className={styles.sectionTitle}>Resume</h1>
       </div>
-      <div id='About'>
-        <h1 className={styles.pageTitle}>About</h1>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+      <div id='About' style={{height: '100vh'}}>
+        <h1 className={styles.sectionTitle}>About</h1>
       </div>
     </div>
   );

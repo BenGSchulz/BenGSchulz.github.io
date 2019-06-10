@@ -1,0 +1,12 @@
+.wrapper:hover {
+  cursor: pointer;
+}
+
+.wrapper:hover > .icon {
+  padding-top: 5px;
+}
+
+.icon {
+  margin-left: 1vw;
+  font-size: 50%;
+}
