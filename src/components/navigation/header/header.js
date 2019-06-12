@@ -6,7 +6,10 @@ import styles from "./header.module.css"
 const Header = (props) => (
   <div className={styles.container}>
     <div className={styles.name}>Benjamin Schulz:</div>
-    <Dropdown currentSelection={props.currentSection} handleNavClick={props.handleNavClick}/>
+    <Dropdown 
+      currentSelection={props.currentSection} 
+      handleNavClick={props.handleNavClick}
+      values={['Projects', 'Resume', 'About']}/>
     <div className={styles.socialGroup}>
       <a href='https://github.com/BenGSchulz' target='_blank' rel='noopener noreferrer' className={styles.social}><FaGithub /></a>
       <a href='https://linkedin.com/in/BenGSchulz/' target='_blank' rel='noopener noreferrer' className={styles.social}><FaLinkedin /></a>
