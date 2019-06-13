@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 
-import styles from "./contentItem.module.css";
+import styles from "./projectCard.module.css";
 
-const ContentItem = (props) => {
+const ProjectCard = (props) => {
 
   const myClass = (props.clicked ? [styles.item, styles.itemClicked].join(' ') : styles.item)
 
@@ -41,4 +41,4 @@ const ContentItem = (props) => {
   );
 };
 
-export default ContentItem;
+export default ProjectCard;

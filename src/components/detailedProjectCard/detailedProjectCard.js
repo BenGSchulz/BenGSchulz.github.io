@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import { FaTimes } from 'react-icons/fa';
 
-import styles from "./contentItemClicked.module.css";
+import styles from "./detailedProjectCard.module.css";
 
 const defaultBGStyle = {
   position: 'fixed',
@@ -52,7 +52,7 @@ const defaultItemStyle = {
 
 let showConditional = false;
 
-const ContentItemClicked = (props) => {
+const DetailedProjectCard = (props) => {
   const itemRef = useRef(null);
 
   const [inProp, setInProp] = useState(true);
@@ -138,5 +138,5 @@ const ContentItemClicked = (props) => {
   );
 };
 
-export default ContentItemClicked;
+export default DetailedProjectCard;
 

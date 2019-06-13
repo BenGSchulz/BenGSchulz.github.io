@@ -16,5 +16,6 @@
 }
 
 .projectSection {
-  padding-top: 15vh;
+  height: 100vh;
+  margin-top: 15vh;
 }
