@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
-// import { FaChevronUp } from 'react-icons/fa'
 import throttle from 'lodash.throttle'
 
-// import styles from './navigation.module.css'
 import Header from './header/header'
 
 const contentElements = [];

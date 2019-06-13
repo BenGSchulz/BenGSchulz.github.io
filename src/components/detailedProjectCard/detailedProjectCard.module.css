@@ -10,7 +10,7 @@
   z-index: 9;
 }
 
-.item {
+.card {
   position: absolute;
   border: 1px solid #f2f2f2;
   border-radius: 5px; 
@@ -28,11 +28,11 @@
   z-index: 10;
 }
 
-.item:hover {
+.card:hover {
   outline: none;
 }
 
-.itemTitle {
+.cardTitle {
   position: absolute;
   right: 50%;
   font-size: 130%;
@@ -94,7 +94,7 @@
 } 
 
 @media only screen and (max-width: 1024px) {
-  .item {
+  .card {
     padding-right: 90%;
   }
 }

@@ -32,7 +32,7 @@ const bgTransitionStyles = {
   }
 }
 
-const defaultItemStyle = {
+const defaultCardStyle = {
   position: 'fixed',
   border: '1px solid #f2f2f2',
   borderRadius: 5, 
@@ -53,17 +53,17 @@ const defaultItemStyle = {
 let showConditional = false;
 
 const DetailedProjectCard = (props) => {
-  const itemRef = useRef(null);
+  const cardRef = useRef(null);
 
   const [inProp, setInProp] = useState(true);
 
-  const itemTransitionStyles = {
+  const cardTransitionStyles = {
     entering: { 
-      height: props.content.itemRect.height,
-      top: props.content.itemRect.top,
-      left: props.content.itemRect.left,
-      paddingRight: '45%',
-      opacity: 1
+      width: props.content.cardRect.width,
+      height: props.content.cardRect.height,
+      top: props.content.cardRect.top,
+      left: props.content.cardRect.left,
+      opacity: 0
     },
     entered:  { 
       height: '95vh',
@@ -82,11 +82,11 @@ const DetailedProjectCard = (props) => {
       opacity: 1 
     },
     exited:  { 
-      height: props.content.itemRect.height,
-      top: props.content.itemRect.top,
-      left: props.content.itemRect.left,
-      paddingRight: '45%',
-      opacity: 1
+      width: props.content.cardRect.width,
+      height: props.content.cardRect.height,
+      top: props.content.cardRect.top,
+      left: props.content.cardRect.left,
+      opacity: 0
     }
   };
 
@@ -105,12 +105,12 @@ const DetailedProjectCard = (props) => {
   }
 
   return (
-      <Transition appear in={inProp} timeout={0} addEndListener={() => {handleTransitionEnd(itemRef.current, props.handleClose)}}>
+      <Transition appear in={inProp} timeout={0} addEndListener={() => {handleTransitionEnd(cardRef.current, props.handleClose)}}>
         {state => (
           <div>
             <div style={{...defaultBGStyle, ...bgTransitionStyles[state]}} onClick={handleBackgroundClick}></div>
-            <div ref={itemRef} style={{...defaultItemStyle, ...itemTransitionStyles[state]}}>
-              <h3 className={styles.itemTitle}>{props.content.title}</h3>
+            <div ref={cardRef} style={{...defaultCardStyle, ...cardTransitionStyles[state]}}>
+              <h3 className={styles.cardTitle}>{props.content.title}</h3>
               { showConditional ? (
                 <div>
                 <p className={styles.closeBtn} onClick={handleBackgroundClick}><FaTimes /></p> 

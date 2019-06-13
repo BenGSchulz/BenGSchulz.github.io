@@ -4,25 +4,25 @@ import styles from "./projectCard.module.css";
 
 const ProjectCard = (props) => {
 
-  const myClass = (props.clicked ? [styles.item, styles.itemClicked].join(' ') : styles.item)
+  const myClass = (props.clicked ? [styles.card, styles.cardClicked].join(' ') : styles.card)
 
   const thisRef = useRef(null);
 
   const handleClick = () => {
     if (thisRef.current) {
-      let thisItem = {
+      let thisCard = {
         ...props.content,
-        itemRect: thisRef.current.getBoundingClientRect()
+        cardRect: thisRef.current.getBoundingClientRect()
       }
-      // let itemRect = thisRef.current.getBoundingClientRect();
-      // console.log(thisItem.itemRect);
-      props.handleClick(thisItem, props.index);
+      // let cardRect = thisRef.current.getBoundingClientRect();
+      // console.log(thisCard.cardRect);
+      props.handleClick(thisCard, props.index);
     } 
   }
 
   return (
     <div ref={thisRef} className={myClass} onClick={handleClick}>
-      <h3 className={styles.itemTitle}>{props.content.title}</h3>
+      <h3 className={styles.cardTitle}>{props.content.title}</h3>
       <a 
         href={props.content.link1} 
         className={[styles.link, styles.left].join(' ')} 

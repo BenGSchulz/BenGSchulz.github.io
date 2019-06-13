@@ -1,5 +1,4 @@
 .container {
-  padding: 0 5vw 5vw 5vw;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -9,6 +8,7 @@
 }
 
 .sectionTitle {
+  margin: 0 5vw;
   height: 10vh;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
@@ -16,6 +16,25 @@
 }
 
 .projectSection {
-  height: 100vh;
-  margin-top: 15vh;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 5vh;
+}
+
+.projectSection::-webkit-scrollbar {
+  display: block;
+  margin: 0 5vw;
+  height: 8px;
+}
+
+.projectSection::-webkit-scrollbar-thumb {
+  /* border: 1px solid #f2f2f2; */
+  border-radius: 5px; 
+  background: #f2f2f2;
+}
+
+.projectSection::-webkit-scrollbar-button {
+  width: 5vw;
 }

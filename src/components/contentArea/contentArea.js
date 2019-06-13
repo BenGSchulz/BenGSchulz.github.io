@@ -1,11 +1,9 @@
-import React, { useState, useCallback } from "react"
-
+import React, { useState, useCallback, useRef } from "react"
 import styles from "./contentArea.module.css"
-
 import ProjectCard from '../projectCard/projectCard';
 import DetailedProjectCard from '../detailedProjectCard/detailedProjectCard';
 
-const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const data = {
   title: 'Test Title',
@@ -14,6 +12,8 @@ const data = {
 }
 
 const ContentArea = (props) => {
+
+  const projectsRef = useRef(null);
 
   const [clickedCardIndex, setClickedCardIndex] = useState(-1);
   const [showDetailCard, setShowDetailCard] = useState(false);
@@ -30,10 +30,26 @@ const ContentArea = (props) => {
     setShowDetailCard(false);
   }, []);
 
+  const handleProjectsWheel = useCallback((e) => {
+
+    if (e.deltaY < 0) {
+      if (projectsRef.current.scrollLeft > 0) {
+        projectsRef.current.scrollLeft -= 150;
+        // e.preventDefault();
+        e.stopPropagation();
+      }
+    } else {
+      if (projectsRef.current.scrollLeft < projectsRef.current.scrollWidth) {
+        projectsRef.current.scrollLeft += 150;
+        // e.preventDefault();
+        e.stopPropagation();
+      }
+    }
+  },[]);
+
   return (
     <div className={styles.container}>
-      <div id='Projects' className={styles.projectSection}>
-        {/* <h1 className={styles.sectionTitle}>Projects</h1> */}
+      <div id='Projects' ref={projectsRef} className={styles.projectSection} onWheel={(e) => {handleProjectsWheel(e)}}>
         { cards.map(i => {
             let clicked = ((i === clickedCardIndex) ? true : false);
             return <ProjectCard 

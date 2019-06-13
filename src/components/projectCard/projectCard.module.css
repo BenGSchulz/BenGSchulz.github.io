@@ -1,4 +1,4 @@
-.item {
+/* .card {
   position: relative;
   border: 1px solid #f2f2f2;
   border-radius: 5px; 
@@ -12,19 +12,43 @@
   padding-bottom: 45%;
   margin: 2.5%;
   transition: all .25s;
+} */
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 75vh;
+  height: 75vh;
+  margin: 15vh 2.5vw 5vh 2.5vw;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px; 
+  background: #101213;
+  text-align: center;
+  user-select: none;
+  
+  transition: all .25s;
 }
 
-.item:hover {
+.card:first-child {
+  margin-left: 5vw;
+}
+
+.card:last-child {
+  margin-right: 5vw;
+}
+
+.card:hover {
   outline: none;
   cursor: zoom-in;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.itemClicked {
-  transform: scale(1.1);
+.cardClicked {
+  transform: scale(1.05);
 }
 
-.itemTitle {
+.cardTitle {
   position: absolute;
   right: 50%;
   font-size: 130%;
@@ -55,33 +79,14 @@
 }
 
 .link:hover {
-  /* bottom: 6%; */
   padding-bottom: 10px;
-  /* margin-bottom: 1%; */
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...}  */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-  .link {
-   display: none;
+@media only screen and (max-aspect-ratio: 1/1) {
+  .card {
+    width: 75vw;
+    height: 75vw;
   }
+}
 
-  .itemClicked {
-    transform: scale(1);
-  }
 
-} 
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...}  */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...}  */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (max-width: 1200px) {
-
-} */
