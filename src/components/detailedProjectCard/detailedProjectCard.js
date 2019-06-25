@@ -40,11 +40,6 @@ const defaultCardStyle = {
   textAlign: 'center',
   userSelect: 'none',
   boxSizing: 'border-box',
-  width: 0,
-  height: '95vh',
-  top: '5vh',
-  left: '50%',
-  paddingRight: '50%',
   opacity: 1,
   transition: 'all .5s',
   zIndex: 2000

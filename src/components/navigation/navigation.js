@@ -30,9 +30,9 @@ const Navigation = () => {
   const throttledScroll = throttle(handleScroll, 100);
   
   useEffect(() => {
-    contentElements.push(document.getElementById('About'),
-                        document.getElementById('Resume'),
-                        document.getElementById('Projects'));
+    contentElements.push(document.getElementById('Resume'),
+                          document.getElementById('About'),
+                          document.getElementById('Projects'));
 
     window.addEventListener('wheel', throttledScroll);
 

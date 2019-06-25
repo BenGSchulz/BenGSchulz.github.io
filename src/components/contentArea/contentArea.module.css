@@ -14,27 +14,3 @@
   border-bottom: 1px solid #f2f2f2;
   line-height: 10vh;
 }
-
-.projectSection {
-  position: relative;
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin-bottom: 5vh;
-}
-
-.projectSection::-webkit-scrollbar {
-  display: block;
-  margin: 0 5vw;
-  height: 8px;
-}
-
-.projectSection::-webkit-scrollbar-thumb {
-  /* border: 1px solid #f2f2f2; */
-  border-radius: 5px; 
-  background: #f2f2f2;
-}
-
-.projectSection::-webkit-scrollbar-button {
-  width: 5vw;
-}
