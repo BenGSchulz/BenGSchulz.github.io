@@ -14,29 +14,32 @@ const ProjectCard = (props) => {
         ...props.content,
         cardRect: thisRef.current.getBoundingClientRect()
       }
-      // let cardRect = thisRef.current.getBoundingClientRect();
-      // console.log(thisCard.cardRect);
       props.handleClick(thisCard, props.index);
     } 
   }
 
   return (
-    <div ref={thisRef} className={myClass} onClick={handleClick}>
-      <h3 className={styles.cardTitle}>{props.content.title}</h3>
+    <div ref={thisRef} className={myClass} onClick={handleClick} 
+         style={{backgroundImage: `url(${props.content.frontmatter.previewImage}`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'}}>
+      <h3 className={styles.cardTitle}>{props.content.frontmatter.title}</h3>
+      {/* eslint-disable-next-line  */}
+      {/* <img src={props.content.frontmatter.previewImage} alt='Preview Image' className={styles.preview} /> */}
       <a 
-        href={props.content.link1} 
+        href={props.content.frontmatter.link1} 
         className={[styles.link, styles.left].join(' ')} 
         onClick={(e) => {e.stopPropagation()}}
         target='_blank' 
         rel='noopener noreferrer'
-      >Link 1</a>
+      >GitHub</a>
       <a 
-        href={props.content.link2} 
+        href={props.content.frontmatter.link2} 
         className={[styles.link, styles.right].join(' ')} 
         onClick={(e) => {e.stopPropagation()}}
         target='_blank' 
         rel='noopener noreferrer'
-      >Link 2</a>
+      >Website</a>
     </div>
   );
 };

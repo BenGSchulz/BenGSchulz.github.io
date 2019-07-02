@@ -1,41 +1,9 @@
-.background {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: black;
-  opacity: .5;
-  cursor: zoom-out;
-  z-index: 9;
-}
-
-.card {
-  position: absolute;
-  border: 1px solid #f2f2f2;
-  border-radius: 5px; 
-  background: #101213;
-  text-align: center;
-  user-select: none;
-  box-sizing: border-box;
-  height: 90vh;
-  width: 0;
-  top: 5vh;
-  left: 50%;
-  padding-right: 50%;
-  transform: translateX(-50%);
-  transition: all .5s;
-  z-index: 10;
-}
-
-.card:hover {
-  outline: none;
-}
-
 .cardTitle {
   position: absolute;
+  width: 100%;
+  margin-top: 1%;
   right: 50%;
-  font-size: 130%;
+  font-size: 220%;
   transform: translateX(50%);
   box-sizing: border-box;
 }
@@ -45,7 +13,7 @@
   top: 2%;
   right: 1%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 0 10px;
   margin: 0;
   transition: all .25s;
 }
@@ -53,6 +21,61 @@
 .closeBtn:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.detailContainer {
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 90%;
+  height: 75%;
+  top: 10%;
+  left: 5%;
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.detailContainer > hr {
+  display: none;
+}
+
+.detailContainer img {
+  display: block;
+  width: 90%;
+  margin-bottom: 20px;
+  transform: translateX(5%);
+} 
+
+.detailContainer p {
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+.detailContainer a {
+  color: #f2f2f2;
+}
+
+.detailContainer ul {
+  list-style-type: none;
+}
+
+.detailContainer::-webkit-scrollbar {
+  display: block;
+}
+
+.detailContainer::-webkit-scrollbar-thumb {
+  border-radius: 5px; 
+  width: 5px;
+  background: #f2f2f2;
+}
+
+.detailContainer::-webkit-scrollbar-button {
+  display: none;
 }
 
 .link {
@@ -82,28 +105,9 @@
   /* margin-bottom: 1%; */
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...}  */
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   .link {
-   /* display: none; */
    transition: all 1s;
   }
 } 
-
-@media only screen and (max-width: 1024px) {
-  .card {
-    padding-right: 90%;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...}  */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...}  */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */

@@ -2,19 +2,39 @@ import React, { useState, useCallback } from 'react'
 import styles from './cardCarousel.module.css'
 import ProjectCard from '../projectCard/projectCard'
 import DetailedProjectCard from '../detailedProjectCard/detailedProjectCard'
-const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+import { useStaticQuery, graphql } from 'gatsby';
+// const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
-const data = {
-  title: 'Test Title',
-  link1: 'https://github.com/BenGSchulz',
-  link2: 'https://linkedin.com/in/BenGSchulz'
-}
+// const data = {
+//   title: 'Test Title',
+//   link1: 'https://github.com/BenGSchulz',
+//   link2: 'https://linkedin.com/in/BenGSchulz'
+// }
 
 const CardCarousel = (props) => {
 
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              link1
+              link2
+              previewImage
+            }
+            html
+          }
+        }
+      }
+    }  
+  `);
+
   const [clickedCardIndex, setClickedCardIndex] = useState(-1);
   const [showDetailCard, setShowDetailCard] = useState(false);
-  const [detailData, setDetailData] = useState(data);
+  const [detailData, setDetailData] = useState(null);
 
   const handleCardClick = useCallback((inData, cardIndex) => {
     setClickedCardIndex(cardIndex);
@@ -29,9 +49,19 @@ const CardCarousel = (props) => {
 
   return (
     <div>
-      {/* <div id='Projects' ref={projectsRef} className={styles.projectSection} onWheel={(e) => {handleProjectsWheel(e)}}> */}
       <div id='Projects' className={styles.container}>
-        { cards.map(i => {
+        {data.allMarkdownRemark.edges.map(({ node }, i) => {
+          let clicked = ((i === clickedCardIndex) ? true : false);
+          return <ProjectCard 
+                    key={node.id}
+                    index={i}
+                    content={node}
+                    clicked={clicked} 
+                    handleClick={handleCardClick} 
+                  />;
+          })
+        }
+        {/* { cards.map(i => {
             let clicked = ((i === clickedCardIndex) ? true : false);
             return <ProjectCard 
                       key={i}
@@ -41,7 +71,7 @@ const CardCarousel = (props) => {
                       handleClick={handleCardClick} 
                     />;
             })
-        }
+        } */}
         {
           (showDetailCard ? 
             <DetailedProjectCard 
@@ -52,7 +82,7 @@ const CardCarousel = (props) => {
         }
       </div>
     </div>
-);
+  );
 };
 
-export default CardCarousel
+export default CardCarousel;

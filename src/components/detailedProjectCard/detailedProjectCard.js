@@ -61,20 +61,18 @@ const DetailedProjectCard = (props) => {
       opacity: 0
     },
     entered:  { 
+      width: '95vw',
       height: '95vh',
       top: '2.5vh',
-      left: '50%',
-      paddingRight: '90%',
-      transform: 'translateX(-50%)', 
+      left: '2.5vw',
       opacity: 1
     },
     exiting:  { 
+      width: '95vw',
       height: '95vh',
       top: '2.5vh',
-      left: '50%',
-      paddingRight: '90%',
-      transform: 'translateX(-50%)',
-      opacity: 1 
+      left: '2.5vw',
+      opacity: 1
     },
     exited:  { 
       width: props.content.cardRect.width,
@@ -105,24 +103,25 @@ const DetailedProjectCard = (props) => {
           <div>
             <div style={{...defaultBGStyle, ...bgTransitionStyles[state]}} onClick={handleBackgroundClick}></div>
             <div ref={cardRef} style={{...defaultCardStyle, ...cardTransitionStyles[state]}}>
-              <h3 className={styles.cardTitle}>{props.content.title}</h3>
+              <h3 className={styles.cardTitle}>{props.content.frontmatter.title}</h3>
               { showConditional ? (
                 <div>
-                <p className={styles.closeBtn} onClick={handleBackgroundClick}><FaTimes /></p> 
-                <a 
-                  href={props.content.link1} 
-                  className={[styles.link, styles.left].join(' ')} 
-                  onClick={(e) => {e.stopPropagation()}}
-                  target='_blank' 
-                  rel='noopener noreferrer'
-                >Link 1</a>
-                <a 
-                  href={props.content.link2} 
-                  className={[styles.link, styles.right].join(' ')} 
-                  onClick={(e) => {e.stopPropagation()}}
-                  target='_blank' 
-                  rel='noopener noreferrer'
-                >Link 2</a>
+                  <p className={styles.closeBtn} onClick={handleBackgroundClick}><FaTimes /></p>
+                  <div className={styles.detailContainer} dangerouslySetInnerHTML={{__html: props.content.html}} />
+                  <a 
+                    href={props.content.frontmatter.link1} 
+                    className={[styles.link, styles.left].join(' ')} 
+                    onClick={(e) => {e.stopPropagation()}}
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >GitHub</a>
+                  <a 
+                    href={props.content.frontmatter.link2} 
+                    className={[styles.link, styles.right].join(' ')} 
+                    onClick={(e) => {e.stopPropagation()}}
+                    target='_blank' 
+                    rel='noopener noreferrer'
+                  >Website</a>
                 </div>
               )
               : null }
