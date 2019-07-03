@@ -1,19 +1,19 @@
 import React from 'react'
 import styles from './contentArea.module.css'
 import CardCarousel from '../cardCarousel/cardCarousel'
+import About from '../about/about'
+import Resume from '../resume/resume'
 
 const ContentArea = (props) => {
   return (
     <div className={styles.container}>
       <CardCarousel />
       
-      <div id='About' style={{height: '100vh'}}>
-        <h1 className={styles.sectionTitle}>About</h1>
-      </div>
+      <h1 id='About' className={styles.sectionTitle}>About</h1>
+      <About />
 
-      <div id='Resume' style={{height: '100vh'}}>
-        <h1 className={styles.sectionTitle}>Resume</h1>
-      </div>
+      <h1 id='Resume' className={styles.sectionTitle}>Resume</h1>
+      <Resume />
       
     </div>
   );

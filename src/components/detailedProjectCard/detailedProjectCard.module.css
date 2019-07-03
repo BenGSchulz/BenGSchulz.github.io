@@ -32,6 +32,8 @@
   top: 10%;
   left: 5%;
   padding: 20px;
+  font-size: 120%;
+  line-height: 1.7;
   text-overflow: ellipsis;
   white-space: normal;
   overflow-y: scroll;

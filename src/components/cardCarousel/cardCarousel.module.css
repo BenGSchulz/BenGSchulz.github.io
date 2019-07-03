@@ -1,23 +1,22 @@
 .container {
   position: relative;
+  margin-bottom: 3.5vh;
+  box-sizing: border-box;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-bottom: 5vh;
 }
 
 .container::-webkit-scrollbar {
   display: block;
-  margin: 0 5vw;
-  height: 10px;
+  height: 1.5vh;
 }
 
-.container::-webkit-scrollbar-thumb:hover {
+.container::-webkit-scrollbar:hover {
   cursor: ew-resize;
 }
 
 .container::-webkit-scrollbar-thumb {
-  /* border: 1px solid #f2f2f2; */
   border-radius: 5px; 
   background: #f2f2f2;
 }

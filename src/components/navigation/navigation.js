@@ -18,7 +18,7 @@ const Navigation = () => {
   const handleScroll = () => {
     contentElements.some((el) => {
       const boundingRect = el.getBoundingClientRect();
-      if (boundingRect.y <= 0) {
+      if (boundingRect.y <= 100) {
         setCurrentSectionId(el.id);
         return true;
       } else {
@@ -44,7 +44,6 @@ const Navigation = () => {
   return (
     <div>
       <Header currentSection={currentSectionId} handleNavClick={handleNavClick}/>
-      {/* <span className={styles.toTopBtn} onClick={() => {handleNavClick('Projects');}}><FaChevronUp /></span> */}
     </div>
   );
 }
