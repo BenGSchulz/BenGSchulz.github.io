@@ -7,3 +7,9 @@
   text-align: justify;
   line-height: 1.5;
 }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    text-align: left;
+  }
+}

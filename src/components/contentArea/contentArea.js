@@ -6,7 +6,7 @@ import Resume from '../resume/resume'
 
 const ContentArea = (props) => {
   return (
-    <div className={styles.container}>
+    <div id='ContentArea' className={styles.container}>
       <CardCarousel />
       
       <h1 id='About' className={styles.sectionTitle}>About</h1>
