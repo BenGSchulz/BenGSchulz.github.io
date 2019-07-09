@@ -1,51 +1,83 @@
 import React, { useState, useEffect } from "react"
-import throttle from 'lodash.throttle'
+// import throttle from 'lodash.throttle'
+import debounce from "lodash.debounce"
 
-import Header from './header/header'
+import Header from "./header/header"
 
-const contentElements = [];
+const contentElements = []
+let currentSectionIndex = 0
 
 const Navigation = () => {
-  const [currentSectionId, setCurrentSectionId] = useState('Projects');
+  const [currentSectionId, setCurrentSectionId] = useState("Projects")
 
-  const handleNavClick = (id) => {
-    document.getElementById(id).scrollIntoView({ 
-      behavior: 'smooth' 
-    });
-    setCurrentSectionId(id);
+  const handleNavClick = id => {
+    const el = document.getElementById(id);
+    el.scrollIntoView({
+      behavior: "smooth",
+    })
+    setCurrentSectionId(id)
+
+    currentSectionIndex = contentElements.indexOf(el);
   }
 
-  const handleScroll = () => {
-    contentElements.some((el) => {
-      const boundingRect = el.getBoundingClientRect();
-      if (boundingRect.y <= 100) {
-        setCurrentSectionId(el.id);
-        return true;
-      } else {
-        return false;
-      }
-    });
-  };
-  
-  const throttledScroll = throttle(handleScroll, 100);
-  
-  useEffect(() => {
-    contentElements.push(document.getElementById('Resume'),
-                          document.getElementById('About'),
-                          document.getElementById('Projects'));
+  const handleScroll = event => {
+    console.log(event);
 
-    window.addEventListener('wheel', throttledScroll);
+    if (event.deltaY < 0) {
+      if (currentSectionIndex < contentElements.length - 1) {
+        currentSectionIndex++;
+      }
+    } else {
+      if (currentSectionIndex > 0) {
+        currentSectionIndex--;
+      }
+    }
+
+    handleNavClick(contentElements[currentSectionIndex].id);
+
+    console.log(currentSectionIndex)
+    // contentElements.some((el) => {
+    //   const boundingRect = el.getBoundingClientRect();
+    //   if (boundingRect.y <= 100) {
+    //     setCurrentSectionId(el.id);
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // });
+  }
+
+  const debouncedScroll = debounce(handleScroll, 250, { maxWait: 2000 })
+  // const throttledScroll = throttle(handleScroll, 1000, { trailing: true });
+
+  useEffect(() => {
+    contentElements.push(
+      document.getElementById("Resume"),
+      document.getElementById("About"),
+      document.getElementById("Projects")
+    );
+
+    currentSectionIndex = contentElements.length - 1;
+
+    window.addEventListener("wheel", debouncedScroll);
+    window.addEventListener("touchmove", debouncedScroll);
+    // window.addEventListener('wheel', throttledScroll);
 
     return () => {
-      window.removeEventListener('wheel', throttledScroll);
-    };
+      window.removeEventListener("wheel", debouncedScroll);
+      window.removeEventListener("touchmove", debouncedScroll);
+      // window.removeEventListener('wheel', throttledScroll);
+    }
   }, [contentElements]);
 
   return (
     <div>
-      <Header currentSection={currentSectionId} handleNavClick={handleNavClick}/>
+      <Header
+        currentSection={currentSectionId}
+        handleNavClick={handleNavClick}
+      />
     </div>
-  );
+  )
 }
 
 export default Navigation
