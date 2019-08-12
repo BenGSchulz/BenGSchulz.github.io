@@ -22,7 +22,8 @@
 
 .dropper {
   position: fixed;
-  top: calc(10vh + 2px);
+  box-sizing: border-box;
+  top: 10vh;
   left: 0;
   width: 100vw;
   background: rgba(16, 18, 19, .9);

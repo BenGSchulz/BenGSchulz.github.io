@@ -1,8 +1,9 @@
 .container {
   position: relative;
   box-sizing: border-box;
-  height: 80vh;
-  margin: 5vh 5vw;
+  height: 90vh;
+  width: 100vw;
+  padding: 5vh 5vw;
   font-size: 150%;
   text-align: justify;
   line-height: 1.5;

@@ -49,7 +49,7 @@ const CardCarousel = (props) => {
 
   return (
     <div>
-      <div id='Projects' className={styles.container}>
+      <div className={styles.container}>
         {data.allMarkdownRemark.edges.map(({ node }, i) => {
           let clicked = ((i === clickedCardIndex) ? true : false);
           return <ProjectCard 

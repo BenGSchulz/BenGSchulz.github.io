@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
 import { FaTimes } from 'react-icons/fa';
 
@@ -11,7 +11,7 @@ const defaultBGStyle = {
   top: 0,
   left: 0,
   background: 'black',
-  opacity: .5,
+  opacity: .7,
   cursor: 'zoom-out',
   transition: 'opacity .5s',
   zIndex: 1500,
@@ -22,10 +22,10 @@ const bgTransitionStyles = {
     opacity: 0
   },
   entered: {
-    opacity: .5
+    opacity: .7
   },
   exiting: {
-    opacity: .5
+    opacity: .7
   },
   exited: {
     opacity: 0
@@ -52,6 +52,12 @@ const DetailedProjectCard = (props) => {
 
   const [inProp, setInProp] = useState(true);
 
+  useEffect(() => {
+    cardRef.current.addEventListener("wheel", ((e) => {e.stopPropagation()}));
+
+    return (cardRef.current.removeEventListener("wheel", ((e) => {e.preventDefault()})));
+  })
+
   const cardTransitionStyles = {
     entering: { 
       width: props.content.cardRect.width,
@@ -61,17 +67,17 @@ const DetailedProjectCard = (props) => {
       opacity: 0
     },
     entered:  { 
-      width: '95vw',
-      height: '95vh',
-      top: '2.5vh',
-      left: '2.5vw',
+      width: '90vw',
+      height: '90vh',
+      top: '5vh',
+      left: '5vw',
       opacity: 1
     },
     exiting:  { 
-      width: '95vw',
-      height: '95vh',
-      top: '2.5vh',
-      left: '2.5vw',
+      width: '90vw',
+      height: '90vh',
+      top: '5vh',
+      left: '5vw',
       opacity: 1
     },
     exited:  { 

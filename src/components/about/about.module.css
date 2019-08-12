@@ -1,11 +1,22 @@
 .container {
   position: relative;
   box-sizing: border-box;
-  height: 80vh;
-  margin: 5vh 5vw;
-  font-size: 150%;
+  height: 90vh;
+  widows: 100vw;
+  padding: 5vh 10vw;
+  font-size: 175%;
   text-align: justify;
   line-height: 1.5;
+}
+
+.detail {
+  border-bottom: 1px solid #f2f2f2;
+  transition: padding .25s;
+}
+
+.detail:hover {
+  cursor: pointer;
+  padding-bottom: 5px;
 }
 
 @media only screen and (max-width: 1024px) {

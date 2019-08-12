@@ -13,4 +13,5 @@
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
   line-height: 10vh;
+  box-sizing: border-box;
 }
