@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react"
 import throttle from "lodash.throttle"
-// import debounce from "lodash.debounce"
-
 import Header from "./header/header"
 
 let contentArea = null
 const contentElements = []
 let currentSectionIndex = 2
 
-// let scrollPos = 0;
-
 const Navigation = () => {
-  const [currentSectionId, setCurrentSectionId] = useState("Projects")
+  const [currentSectionId, setCurrentSectionId] = useState("About")
 
   const handleNavClick = id => {
     const el = document.getElementById(id)
@@ -44,8 +40,8 @@ const Navigation = () => {
   useEffect(() => {
     contentElements.push(
       document.getElementById("Resume"),
-      document.getElementById("About"),
-      document.getElementById("Projects")
+      document.getElementById("Projects"),
+      document.getElementById("About")
     )
 
     contentArea = document.getElementById("ContentArea")

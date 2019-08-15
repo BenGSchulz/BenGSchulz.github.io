@@ -3,13 +3,6 @@ import styles from './cardCarousel.module.css'
 import ProjectCard from '../projectCard/projectCard'
 import DetailedProjectCard from '../detailedProjectCard/detailedProjectCard'
 import { useStaticQuery, graphql } from 'gatsby';
-// const cards = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
-// const data = {
-//   title: 'Test Title',
-//   link1: 'https://github.com/BenGSchulz',
-//   link2: 'https://linkedin.com/in/BenGSchulz'
-// }
 
 const CardCarousel = (props) => {
 
@@ -61,17 +54,7 @@ const CardCarousel = (props) => {
                   />;
           })
         }
-        {/* { cards.map(i => {
-            let clicked = ((i === clickedCardIndex) ? true : false);
-            return <ProjectCard 
-                      key={i}
-                      index={i}
-                      content={data}
-                      clicked={clicked} 
-                      handleClick={handleCardClick} 
-                    />;
-            })
-        } */}
+
         {
           (showDetailCard ? 
             <DetailedProjectCard 

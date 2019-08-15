@@ -9,7 +9,7 @@ const Header = (props) => (
     <Dropdown 
       currentSelection={props.currentSection} 
       handleNavClick={props.handleNavClick}
-      values={['Projects', 'About', 'Resume']}/>
+      values={['About', 'Projects', 'Resume']}/>
     <div className={styles.socialGroup}>
       <a href='https://github.com/BenGSchulz' target='_blank' rel='noopener noreferrer' className={styles.social}><FaGithub /></a>
       <a href='https://linkedin.com/in/BenGSchulz/' target='_blank' rel='noopener noreferrer' className={styles.social}><FaLinkedin /></a>
