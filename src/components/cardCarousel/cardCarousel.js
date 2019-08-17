@@ -1,11 +1,14 @@
-import React, { useState, useCallback } from 'react'
-import styles from './cardCarousel.module.css'
-import ProjectCard from '../projectCard/projectCard'
-import DetailedProjectCard from '../detailedProjectCard/detailedProjectCard'
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState, useCallback, useRef, useEffect } from "react"
+import styles from "./cardCarousel.module.css"
+import ProjectCard from "../projectCard/projectCard"
+import DetailedProjectCard from "../detailedProjectCard/detailedProjectCard"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import { useStaticQuery, graphql } from "gatsby"
 
-const CardCarousel = (props) => {
+let hoverInterval = null
+let scrollAmount = 30
 
+const CardCarousel = props => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark {
@@ -22,50 +25,124 @@ const CardCarousel = (props) => {
           }
         }
       }
-    }  
-  `);
+    }
+  `)
 
-  const [clickedCardIndex, setClickedCardIndex] = useState(-1);
-  const [showDetailCard, setShowDetailCard] = useState(false);
-  const [detailData, setDetailData] = useState(null);
+  const [clickedCardIndex, setClickedCardIndex] = useState(-1)
+  const [showDetailCard, setShowDetailCard] = useState(false)
+  const [detailData, setDetailData] = useState(null)
+
+  const container = useRef(null)
+  const leftScroller = useRef(null)
+  const rightScroller = useRef(null)
+
+  useEffect(() => {
+    leftScroller.current.addEventListener("wheel", e => {
+      e.preventDefault()
+      e.stopPropagation()
+    })
+    rightScroller.current.addEventListener("wheel", e => {
+      e.preventDefault()
+      e.stopPropagation()
+    })
+
+    return () => {
+      leftScroller.current.removeEventListener("wheel", e => {
+        e.preventDefault()
+        e.stopPropagation()
+      })
+      rightScroller.current.removeEventListener("wheel", e => {
+        e.preventDefault()
+        e.stopPropagation()
+      })
+    }
+  })
 
   const handleCardClick = useCallback((inData, cardIndex) => {
-    setClickedCardIndex(cardIndex);
-    setDetailData(inData);
-    setShowDetailCard(true);
-  }, []);
+    setClickedCardIndex(cardIndex)
+    setDetailData(inData)
+    setShowDetailCard(true)
+  }, [])
 
   const handleDetailCardClose = useCallback(() => {
-    setClickedCardIndex(-1);
-    setShowDetailCard(false);
-  }, []);
+    setClickedCardIndex(-1)
+    setShowDetailCard(false)
+  }, [])
+
+  const scrollLeft = () => {
+    container.current.scrollLeft -= scrollAmount
+  }
+
+  const scrollRight = () => {
+    container.current.scrollLeft += scrollAmount
+  }
+
+  const handleLeftHover = () => {
+    hoverInterval = setInterval(scrollLeft, 50)
+  }
+
+  const handleRightHover = () => {
+    hoverInterval = setInterval(scrollRight, 50)
+  }
+
+  const handleMouseLeave = () => {
+    clearInterval(hoverInterval)
+  }
+
+  const handleMouseDown = () => {
+    scrollAmount = 100
+  }
+
+  const handleMouseUp = () => {
+    scrollAmount = 30
+  }
 
   return (
     <div>
-      <div className={styles.container}>
-        {data.allMarkdownRemark.edges.map(({ node }, i) => {
-          let clicked = ((i === clickedCardIndex) ? true : false);
-          return <ProjectCard 
-                    key={node.id}
-                    index={i}
-                    content={node}
-                    clicked={clicked} 
-                    handleClick={handleCardClick} 
-                  />;
-          })
-        }
+      <div
+        ref={leftScroller}
+        className={`${styles.scroller} ${styles.left}`}
+        onMouseEnter={handleLeftHover}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+      >
+        <FaChevronLeft />
+      </div>
+      <div
+        ref={rightScroller}
+        className={`${styles.scroller} ${styles.right}`}
+        onMouseEnter={handleRightHover}
+        onMouseLeave={handleMouseLeave}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+      >
+        <FaChevronRight />
+      </div>
 
-        {
-          (showDetailCard ? 
-            <DetailedProjectCard 
-              content={detailData} 
-              handleClose={handleDetailCardClose}
-            /> 
-            : null)
-        }
+      <div ref={container} className={styles.container}>
+        {data.allMarkdownRemark.edges.map(({ node }, i) => {
+          let clicked = i === clickedCardIndex ? true : false
+          return (
+            <ProjectCard
+              key={node.id}
+              index={i}
+              content={node}
+              clicked={clicked}
+              handleClick={handleCardClick}
+            />
+          )
+        })}
+
+        {showDetailCard && (
+          <DetailedProjectCard
+            content={detailData}
+            handleClose={handleDetailCardClose}
+          />
+        )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardCarousel;
+export default CardCarousel
