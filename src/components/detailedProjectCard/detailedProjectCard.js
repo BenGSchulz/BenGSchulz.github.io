@@ -55,7 +55,7 @@ const DetailedProjectCard = (props) => {
   useEffect(() => {
     cardRef.current.addEventListener("wheel", ((e) => {e.stopPropagation()}));
 
-    return (cardRef.current.removeEventListener("wheel", ((e) => {e.preventDefault()})));
+    return (cardRef.current.removeEventListener("wheel", ((e) => {e.stopPropagation()})));
   })
 
   const cardTransitionStyles = {

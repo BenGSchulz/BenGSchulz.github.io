@@ -9,7 +9,7 @@
   overflow-y: scroll;
 }
 
-.container::-webkit-scrollbar {
+/* .container::-webkit-scrollbar {
   display: block;
   width: 8px;
 }
@@ -23,9 +23,9 @@
   width: 5vw;
   height: 1.5vh;
   margin: 0;
-}
+} */
 
-a {
+.container a {
   color: #f2f2f2;
   font-style: italic;
 }
@@ -59,7 +59,7 @@ a {
   box-sizing: border-box;
   width: 100%;
   border-bottom: 1px solid #f2f2f2;
-  font-size: 170%;
+  font-size: 150%;
 }
 
 .blockHeader {
@@ -67,7 +67,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
-  font-size: 150%;
+  font-size: 120%;
 }
 
 .educationBody {
@@ -81,6 +81,23 @@ a {
   margin: 5px 0 0 0;
 }
 
+.fullTable {
+  margin-left: -10px;
+  border-spacing: 10px;
+}
+
+.mobileTable {
+  margin-left: -10px;
+  border-spacing: 10px;
+}
+
+.mobileTable th {
+  text-decoration: underline;
+}
+
+.mobileTable td {
+  vertical-align: top;
+}
 
 @media only screen and (max-width: 1024px) {
   .sectionHeader {
@@ -89,5 +106,17 @@ a {
 
   .blockHeader {
     font-size: 120%;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .mobileTable {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .fullTable {
+    display: none;
   }
 }
