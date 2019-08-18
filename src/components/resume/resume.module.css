@@ -2,9 +2,92 @@
   position: relative;
   box-sizing: border-box;
   height: 90vh;
-  width: 100vw;
-  padding: 5vh 5vw;
+  width: 90vw;
+  margin: 0 5vw;
+  padding: 50px 5vw 5% 5vw;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.container::-webkit-scrollbar-button {
+  width: 5vw;
+  height: 1.5vh;
+  margin: 0;
+}
+
+a {
+  color: #f2f2f2;
+  font-style: italic;
+}
+
+.download {
+  position: absolute;
+  width: fit-content;
+  bottom: 90%;
+  left: 5vw;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 200%;
+  transition: all 0.25s;
+}
+
+.download:hover {
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom-width: 2px;
+}
+
+.section {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: -25px;
+}
+
+.sectionHeader {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 170%;
+}
+
+.blockHeader {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
   font-size: 150%;
-  text-align: justify;
-  line-height: 1.5;
+}
+
+.educationBody {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+.experienceBody {
+  padding-left: 20px;
+  margin: 5px 0 0 0;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .sectionHeader {
+    font-size: 150%;
+  }
+
+  .blockHeader {
+    font-size: 120%;
+  }
 }

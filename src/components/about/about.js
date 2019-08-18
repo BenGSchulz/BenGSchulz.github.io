@@ -57,7 +57,7 @@ const About = props => {
           <span>Scott</span>
           <span>Gilligan</span>
         </TextLooper>
-        {", and "}
+        {", "}
         <TextLooper title="everything else" speed={700}>
           <span>everything else</span>
           <span>travel</span>
