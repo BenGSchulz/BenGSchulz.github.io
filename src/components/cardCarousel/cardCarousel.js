@@ -56,7 +56,7 @@ const CardCarousel = props => {
         e.stopPropagation()
       })
     }
-  })
+  }, [])
 
   const handleCardClick = useCallback((inData, cardIndex) => {
     setClickedCardIndex(cardIndex)

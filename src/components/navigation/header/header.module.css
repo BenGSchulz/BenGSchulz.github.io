@@ -15,6 +15,7 @@
 .name {
   position: absolute;
   margin-left: 5%;
+  padding-top: 3px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 200%;

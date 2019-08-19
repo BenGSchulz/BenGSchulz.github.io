@@ -1,29 +1,39 @@
 import React, { useEffect, useRef } from "react"
+// import throttle from "lodash.throttle"
 import styles from "./resume.module.css"
 import { FaFileDownload } from "react-icons/fa"
+import pdf from "../../files/resume.pdf"
 
 const Resume = props => {
   const container = useRef(null)
 
   const scrollHelper = e => {
+    console.log(e)
+
     if (e.deltaY >= 0 || container.current.scrollTop > 0) {
       e.stopPropagation()
     }
   }
+
+  // const throttledScroll = throttle(scrollHelper, 500, { trailing: false })
 
   useEffect(() => {
     container.current.addEventListener("wheel", e => {
       scrollHelper(e)
     })
 
+    // container.current.addEventListener("wheel", throttledScroll)
+
     return container.current.removeEventListener("wheel", e => {
       scrollHelper(e)
     })
+
+    // container.current.removeEventListener("wheel", throttledScroll)
   }, [])
 
   return (
     <div ref={container} className={styles.container}>
-      <a href="src/files/BenSchulzResume.pdf" download>
+      <a href={pdf} download="BenSchulzResume">
         <div className={styles.download}>
           <FaFileDownload />
         </div>
@@ -45,7 +55,7 @@ const Resume = props => {
         <div className={styles.sectionHeader}>Experience</div>
         <div className={styles.blockHeader}>
           <span>
-            Software Developer - <a href="http://spotpost.com">Spotpost</a>
+            Software Developer - <a href={"http://spotpost.com"}>Spotpost</a>
           </span>
           <span>Feb. 2019 - current</span>
         </div>

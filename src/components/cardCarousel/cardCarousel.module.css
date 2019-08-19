@@ -20,6 +20,7 @@
 }
 
 .scroller:hover {
+  cursor: pointer;
   width: 8%;
 }
 
@@ -32,10 +33,6 @@
   );
 }
 
-.left:hover {
-  cursor: w-resize;
-}
-
 .right {
   right: 0;
   background: linear-gradient(
@@ -43,10 +40,6 @@
     rgba(16, 18, 19, 1) 0%,
     rgba(20, 20, 20, 0.8) 100%
   );
-}
-
-.right:hover {
-  cursor: e-resize;
 }
 
 .container::-webkit-scrollbar {

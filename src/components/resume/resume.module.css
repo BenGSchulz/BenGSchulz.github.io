@@ -4,7 +4,7 @@
   height: 90vh;
   width: 90vw;
   margin: 0 5vw;
-  padding: 50px 5vw 5% 5vw;
+  padding: 20px 5vw 20px 5vw;
   text-align: left;
   overflow-y: scroll;
 }
@@ -31,10 +31,8 @@
 }
 
 .download {
-  position: absolute;
+  position: relative;
   width: fit-content;
-  bottom: 90%;
-  left: 5vw;
   border-bottom: 1px solid #f2f2f2;
   font-size: 200%;
   transition: all 0.25s;
@@ -42,16 +40,15 @@
 
 .download:hover {
   cursor: pointer;
-  padding-bottom: 5px;
-  border-bottom-width: 2px;
+  transform: scale(1.1);
 }
 
 .section {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: -25px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .sectionHeader {

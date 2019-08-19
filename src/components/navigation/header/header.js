@@ -2,6 +2,7 @@ import React from "react"
 import { FaGithub, FaLinkedin, FaPaperPlane, FaFilePdf } from "react-icons/fa"
 import Dropdown from "../../dropdown/dropdown"
 import styles from "./header.module.css"
+import pdf from "../../../files/resume.pdf"
 
 const Header = props => (
   <div className={styles.container}>
@@ -32,8 +33,8 @@ const Header = props => (
         <FaPaperPlane />
       </a>
       <a
-        href="src/files/BenSchulzResume.pdf"
-        download
+        href={pdf}
+        download="BenSchulzResume"
         className={styles.social}
       >
         <FaFilePdf />
