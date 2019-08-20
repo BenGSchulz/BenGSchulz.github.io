@@ -40,21 +40,21 @@ const CardCarousel = props => {
     leftScroller.current.addEventListener("wheel", e => {
       e.preventDefault()
       e.stopPropagation()
-    })
+    }, {passive: true})
     rightScroller.current.addEventListener("wheel", e => {
       e.preventDefault()
       e.stopPropagation()
-    })
+    }, {passive: true})
 
     return () => {
       leftScroller.current.removeEventListener("wheel", e => {
         e.preventDefault()
         e.stopPropagation()
-      })
+      }, {passive: true})
       rightScroller.current.removeEventListener("wheel", e => {
         e.preventDefault()
         e.stopPropagation()
-      })
+      }, {passive: true})
     }
   }, [])
 

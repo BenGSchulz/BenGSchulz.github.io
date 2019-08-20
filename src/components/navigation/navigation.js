@@ -54,7 +54,7 @@ const Navigation = () => {
       { passive: false }
     )
 
-    contentArea.addEventListener("wheel", throttledScroll)
+    contentArea.addEventListener("wheel", throttledScroll, { passive: false })
 
     return () => {
       window.removeEventListener(
@@ -65,7 +65,9 @@ const Navigation = () => {
         { passive: false }
       )
 
-      contentArea.removeEventListener("wheel", throttledScroll)
+      contentArea.removeEventListener("wheel", throttledScroll, {
+        passive: false,
+      })
     }
   }, [contentElements])
 

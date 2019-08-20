@@ -8,8 +8,6 @@ const Resume = props => {
   const container = useRef(null)
 
   const scrollHelper = e => {
-    console.log(e)
-
     if (e.deltaY >= 0 || container.current.scrollTop > 0) {
       e.stopPropagation()
     }
@@ -20,13 +18,13 @@ const Resume = props => {
   useEffect(() => {
     container.current.addEventListener("wheel", e => {
       scrollHelper(e)
-    })
+    }, {passive: false})
 
     // container.current.addEventListener("wheel", throttledScroll)
 
     return container.current.removeEventListener("wheel", e => {
       scrollHelper(e)
-    })
+    }, {passive: false})
 
     // container.current.removeEventListener("wheel", throttledScroll)
   }, [])

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Benjamin Schulz`,
+    title: `Ben Schulz`,
     description: `This is the portfolio of Benjamin Schulz.`,
     author: `Benjamin Schulz`,
+    siteUrl: `https://benschulz.dev`
   },
   plugins: [
     {
