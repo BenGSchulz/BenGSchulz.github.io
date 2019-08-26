@@ -5,11 +5,13 @@ import TextLoop from "react-text-loop"
 
 const TextLooper = props => {
   const [hovering, setHovering] = useState(false)
-
-  let UA = navigator.userAgent
-  let hasTouchScreen =
+  let UA = ""
+  if (typeof window !== "undefined") {
+    UA = navigator.userAgent
+  }
+  let hasTouchScreen = (
     /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
-    /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+    /\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA))
 
   const handleHover = e => {
     if (hasTouchScreen) {
