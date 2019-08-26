@@ -9,9 +9,11 @@ const About = props => {
       <div className={styles.text}>
         I'm a software developer passionate about creating stimulating digital
         interactions and platforms. I love bringing ideas to life on a screen
-        and when I'm not working on software or learning new tools for it, I'm
-        gathering inspiration from:
-        {" "}
+        and I'm excited to build my career doing it. My proficiency lies in
+        crafting front-end experiences using JS/HTML/CSS and React. I'm also
+        experienced in full-stack development using noSQL databases and Node.js.
+        I make games with Unity and Unreal Engine too. When I'm not working on
+        software or learning new tools for it, I'm gathering inspiration from:{" "}
         <TextLooper title="the outdoors" speed={700}>
           <span>the outdoors</span>
           <span>biking</span>

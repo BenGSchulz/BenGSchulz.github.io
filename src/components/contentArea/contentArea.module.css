@@ -3,7 +3,7 @@
   height: 100vh;
   position: relative;
   text-align: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@
   margin: 0 5vw;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1025px) {
   .container {
     overflow-y: visible;
   }
