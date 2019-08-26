@@ -19,3 +19,9 @@
 .sectionTitle:first-child {
   margin: 0 5vw;
 }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    overflow-y: visible;
+  }
+}

@@ -29,7 +29,7 @@ const Header = props => (
       >
         <FaLinkedin />
       </a>
-      <a href="mailto:benjamin.g.schulz@gmail.com" className={styles.social}>
+      <a href="mailto:mail@benschulz.dev" className={styles.social}>
         <FaPaperPlane />
       </a>
       <a
