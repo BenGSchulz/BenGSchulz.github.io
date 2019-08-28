@@ -60,11 +60,11 @@ const Resume = props => {
         Denver, CO / Remote
         <ul className={styles.experienceBody}>
           <li>
-            Collaborated with small team to build a new product from the ground
+            Collaborated with cross-functional team to build a new product from the ground
             up.
           </li>
           <li>
-            Implemented front-end presentation and interactions with React.
+            Implemented front-end presentation and interactions with React and designed RESTful API services.
           </li>
           <li>
             Conceptualized new product features and process optimizations for
