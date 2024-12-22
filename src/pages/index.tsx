@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelope,
   faFileDownload,
+  faGlobe,
   faMapMarkerAlt,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
@@ -10,15 +11,9 @@ import type { HeadFC, PageProps } from 'gatsby';
 import * as React from 'react';
 import Employment from '../components/employment';
 import SEO from '../components/seo';
-import resume from '../files/SoftwareResume.pdf';
+import resume from '../files/BenSchulzResume.pdf';
 
 const headerLinkData = [
-  {
-    text: 'Resume',
-    link: resume,
-    icon: faFileDownload,
-    download: 'BenSchulzResume.pdf',
-  },
   {
     text: 'BenGSchulz',
     link: 'https://github.com/BenGSchulz',
@@ -57,12 +52,30 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
         {/* Links */}
         <div className="flex items-center justify-between p-2 sm:p-1">
+          <a
+            className="print:hidden flex gap-1 items-center"
+            href={resume}
+            download="BenSchulzResume.pdf"
+          >
+            <FontAwesomeIcon
+              icon={faFileDownload}
+              className="text-2xl sm:text-base"
+            />
+            <span className="hidden sm:inline">Resume</span>
+          </a>
+          <a
+            className="hidden print:flex gap-1 items-center"
+            href="https://benschulz.dev"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faGlobe} className="text-2xl sm:text-base" />
+            <span className="hidden sm:inline">benschulz.dev</span>
+          </a>
           {headerLinkData.map((item) => (
             <a
               href={item.link}
               className="flex gap-1 items-center"
               target="_blank"
-              download={item.download ?? null}
             >
               <FontAwesomeIcon
                 icon={item.icon}

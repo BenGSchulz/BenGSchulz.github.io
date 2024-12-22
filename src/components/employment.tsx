@@ -18,7 +18,7 @@ const employmentData: Array<EmploymentData> = [
       'Contributed to enterprise-scale Angular codebase across multiple product areas serving business-to-business needs.',
       'Collaborated closely with customers, product owners, and other engineers to deliver more effective, sustainable, and powerful products.',
       'Worked closely with back-end team to design and uptake API methods for new functionality and improve existing API for performance.',
-      'Took lead developer role in two long-term rearchitecting projects with a large focus on improving code standards and best-practices. Largely reduced dependency on deprecated JTwig templating by rebuilding features as efficient, reusable components and service methods.',
+      'Took lead developer role in two long-term rearchitecting projects with a focus on improving code standards and best-practices. Largely reduced dependency on deprecated JTwig templating by rebuilding features as efficient, reusable components and service methods.',
       'Participated in intensive testing culture, using Jasmine and WebdriverIO to achieve high coverage results in unit and e2e tests and improve code quality.',
       'Mentored interns and junior engineers, acting as a lead on projects and driving pair programming + code review sessions to encourage teamwork and knowledge sharing.',
       'Became a "go-to" team member and project lead by demonstrating consistent quality, showing forward-thinking, and taking feedback seriously.',
@@ -28,7 +28,7 @@ const employmentData: Array<EmploymentData> = [
     company: 'SPOTPOST',
     title: 'Software Developer Intern',
     location: 'Denver, CO / Remote',
-    dates: 'Feb. 2019 - Jul. 2024',
+    dates: 'Feb. 2019 - Jul. 2019',
     bullets: [
       'Built a product from the ground up as part of a small cross-functional team.',
       'Designed RESTful API methods and implemented the front-end onboarding flow for a web app using React.',
