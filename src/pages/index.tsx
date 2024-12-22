@@ -133,13 +133,10 @@ const IndexPage: React.FC<PageProps> = () => {
                 Engine 4.
               </li>
               <li>
-                Collaborated closely with team members and delegated work
-                efforts.
-              </li>
-              <li>
                 Tackled a variety of design + engineering roles: Gameplay, AI,
                 UI, animations, audio, level design, and story development.
               </li>
+              <li>Presented game with live demo at capstone showcase.</li>
             </ul>
           </div>
         </div>
