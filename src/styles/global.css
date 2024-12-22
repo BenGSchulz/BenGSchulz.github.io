@@ -4,7 +4,7 @@
 
 html {
   width: 100%;
-  height: 2000px;
+  height: 100%;
   margin: 0;
   padding: 0;
   background: #f2f2f2;
@@ -34,5 +34,11 @@ html {
   @page {
     size: auto;
     margin: 0;
+  }
+
+  /* Make it so that line spacing is compact, but comfortable (smaller than tailwind defaults). */
+  .text-sm,
+  .text-2xl {
+    line-height: 110%;
   }
 }
