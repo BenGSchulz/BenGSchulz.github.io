@@ -64,14 +64,14 @@ const Resume: React.FC = () => {
       <div className="flex flex-col pt-4 gap-2">
         <div className="text-2xl border-b border-current">SKILLS</div>
         <ul className="list-disc pl-4 text-sm">
-          <li>TypeScript/JavaScript, HTML+CSS, Java</li>
+          <li>TypeScript/JavaScript, HTML+CSS, Java, C++</li>
           <li>
             Angular, RxJS, Jasmine, React, Node.js/Express, MongoDB/Mongoose,
-            Jest/Enzyme, Git+GitHub
+            Jest/Enzyme, Git+GitHub, Unreal Engine
           </li>
           <li>
-            Agile, Jira, written+verbal communication, collaborative problem
-            solving
+            Project Management, Mentoring, Agile, Jira, Written+Verbal
+            Communication, Collaborative Problem Solving
           </li>
         </ul>
       </div>
