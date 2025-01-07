@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
   faEnvelope,
+  faFaceSmile,
   faFileDownload,
   faGlobe,
   faMapMarkerAlt,
@@ -8,6 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
+import { Section } from '../constants/section';
 import resume from '../files/BenSchulzResume.pdf';
 
 const headerLinkData = [
@@ -45,56 +47,44 @@ const headerLinkData = [
 
 type HeaderProps<NavType extends string> = {
   navValue: NavType;
-  navOptions: Array<NavType>;
-  handleNav: (navTarget: NavType) => void;
 };
 
 function Header<NavType extends string>(
   props: React.PropsWithChildren<HeaderProps<NavType>>
 ) {
-  function handleNavSelect(navTarget: string): void {
-    // Cast here is okay because the only values available in the select will be of NavType.
-    props.handleNav(navTarget as NavType);
-  }
-
   return (
     <div>
       {/* Header */}
-      <div className="flex flex-col items-start whitespace-nowrap border-b border-current lg:flex-row lg:justify-between lg:items-end print:flex-row print:justify-between print:items-end">
-        <span className="text-3xl lg:text-5xl print:text-5xl">BEN SCHULZ</span>
-        <span className="text-xl lg:text-3xl print:text-3xl">
+      <div className="flex flex-col items-start whitespace-nowrap border-b border-current md:flex-row md:justify-between md:items-end print:flex-row print:justify-between print:items-end">
+        <span className="text-3xl md:text-5xl print:text-5xl">BEN SCHULZ</span>
+        <span className="text-xl md:text-3xl print:text-3xl">
           SOFTWARE DEVELOPER
         </span>
-
-        {/* Nav */}
-        <div className="flex justify-center text-2xl print:hidden">
-          <select
-            className="bg-transparent"
-            name="section"
-            onChange={(e) => handleNavSelect(e.target.value)}
-          >
-            {props.navOptions.map((option) => (
-              <option value={option} key={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
       </div>
 
       {/* Links */}
       <div className="flex items-center justify-between p-2 lg:p-1 print:p-1">
         <a
           className="print:hidden flex gap-1 items-center"
-          href={resume}
-          download="BenSchulzResume.pdf"
+          href={props.navValue === Section.About ? '/resume' : resume}
         >
           <FontAwesomeIcon
             icon={faFileDownload}
             className="text-2xl lg:text-base print:text-base"
           />
-          <span className="hidden lg:inline print:inline">Resume</span>
+          <span className="hidden lg:inline">
+            {props.navValue === Section.About ? 'Resume' : 'Download'}
+          </span>
         </a>
+        {props.navValue !== Section.About && (
+          <a className="print:hidden flex gap-1 items-center" href="/">
+            <FontAwesomeIcon
+              icon={faFaceSmile}
+              className="text-2xl lg:text-base print:text-base"
+            />
+            <span className="hidden lg:inline">About</span>
+          </a>
+        )}
         <a
           className="hidden print:flex gap-1 items-center"
           href="https://benschulz.dev"

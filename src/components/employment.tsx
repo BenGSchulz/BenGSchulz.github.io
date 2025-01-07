@@ -23,12 +23,17 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Contributed to enterprise-scale Angular codebase across multiple product areas serving business-to-business needs.',
+          'Contributed to enterprise-scale Angular codebase across diverse product areas serving business-to-business needs.',
+      },
+      {
+        id: 0.5,
+        content:
+          'Built expertise in TypeScript + RxJS to develop asynchronous, reactive, and scalable data-driven systems.',
       },
       {
         id: 1,
         content:
-          'Lead developer in two long-term rearchitecting projects with a focus on improving performance, capabilities, and code standards.',
+          'Spearheaded long-term re-architecture projects with a focus on improving performance, capabilities, and code standards.',
       },
       {
         id: 2,
@@ -127,18 +132,18 @@ const employmentData: Array<EmploymentData> = [
 const Employment: React.FC = () => {
   return (
     <div className="flex flex-col gap-2 pt-4">
-      <div className="text-2xl border-b border-current">EMPLOYMENT</div>
+      <div className="text-2xl border-b border-current">EXPERIENCE</div>
       {employmentData.map((data) => (
         <div key={data.id}>
-          <div className="flex flex-col lg:flex-row print:flex-row lg:justify-between print:justify-between text-base lg:text-lg print:text-lg">
-            <span className="flex flex-col lg:inline print:inline">
+          <div className="flex flex-col md:flex-row print:flex-row md:justify-between print:justify-between text-base md:text-lg print:text-lg">
+            <span className="flex flex-col md:inline print:inline">
               <span>
                 {data.company}
-                <span className="hidden lg:inline print:inline">, </span>
+                <span className="hidden md:inline print:inline">, </span>
               </span>
               <span className="italic">
                 {data.title}
-                <span className="hidden lg:inline print:inline"> : </span>
+                <span className="hidden md:inline print:inline"> : </span>
               </span>
               <span>{data.location}</span>
             </span>
