@@ -65,6 +65,6 @@ html {
   /* Make it so that line spacing is compact, but comfortable (smaller than tailwind defaults). */
   .text-sm,
   .text-2xl {
-    line-height: 110%;
+    line-height: 115%;
   }
 }

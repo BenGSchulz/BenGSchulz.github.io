@@ -22,7 +22,7 @@ const ResumePage: React.FC<PageProps> = () => {
                 <span>UNIVERSITY OF DENVER</span>
                 <span>Sep. 2015 - Mar. 2019</span>
               </div>
-              <ul className="list-disc pl-6 text-sm">
+              <ul className="list-disc pl-4 text-sm">
                 <li>B.S. Computer Science - 3.9 GPA</li>
                 <li>Minors: Emergent Digital Practices, Mathematics</li>
                 <li>Dean's list and Hornsbeck Scholar</li>
@@ -41,7 +41,7 @@ const ResumePage: React.FC<PageProps> = () => {
               >
                 Recipe Sharing SPA
               </a>
-              <ul className="list-disc pl-6 text-sm">
+              <ul className="list-disc pl-4 text-sm">
                 <li>
                   Full-stack SPA built with Mongo, Express, Angular, Node.
                 </li>
@@ -56,7 +56,7 @@ const ResumePage: React.FC<PageProps> = () => {
               >
                 Blank Canvas
               </a>
-              <ul className="list-disc pl-6 text-sm">
+              <ul className="list-disc pl-4 text-sm">
                 <li>
                   Developed full game from concept pitch to beta release in
                   Unreal Engine 4.
@@ -76,12 +76,13 @@ const ResumePage: React.FC<PageProps> = () => {
             <ul className="list-disc pl-4 text-sm">
               <li>TypeScript/JavaScript, HTML+CSS, Java, C++</li>
               <li>
-                Angular, RxJS, Jasmine, React, Node.js/Express,
-                MongoDB/Mongoose, Jest/Enzyme, Git+GitHub, Unreal Engine
+                Angular, RxJS, React, Node.js/Express, MongoDB/Mongoose,
+                Jasmine, WebDriverIO, Jest/Enzyme, Git+GitHub, Jenkins
               </li>
               <li>
-                Project Management, Mentoring, Agile, Jira, Written+Verbal
-                Communication, Collaborative Problem Solving
+                System Architecture, Project Management, Mentoring, Agile, Jira,
+                Confluence, Written+Verbal Communication, Collaborative Problem
+                Solving
               </li>
             </ul>
           </div>

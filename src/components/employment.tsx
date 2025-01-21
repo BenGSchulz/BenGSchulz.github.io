@@ -16,54 +16,59 @@ const employmentData: Array<EmploymentData> = [
   {
     id: 0,
     company: 'NEXTWORLD',
-    title: 'Software Engineer 2',
+    title: 'Frontend Software Engineer 2',
     location: 'Denver, CO',
     dates: 'Nov. 2019 - Jun. 2024',
     bullets: [
       {
         id: 0,
         content:
-          'Contributed to enterprise-scale Angular codebase across diverse product areas serving business-to-business needs.',
+          'Drove product direction and execution of feature-rich, user-friendly interfaces delivering impact to internal and end users.',
       },
       {
         id: 0.5,
         content:
-          'Built expertise in TypeScript + RxJS to develop asynchronous, reactive, and scalable data-driven systems.',
+          'Built expertise in TypeScript + RxJS to develop data-driven, enterprise-scale systems within an Angular codebase.',
       },
       {
         id: 1,
         content:
-          'Spearheaded long-term re-architecture projects with a focus on improving performance, capabilities, and code standards.',
+          'Spearheaded long-term re-architecture of critical features with a focus on improving performance, capabilities, and code standards.',
       },
       {
         id: 2,
         content:
-          'Collaborated with customers, product owners, and other engineers to deliver more effective, sustainable, and powerful products.',
+          'Proactively collaborated with stakeholders to achieve confidence in implementation as requirements evolve through project lifecycle.',
       },
       {
         id: 3,
         content:
-          'Partnered with back-end team to design and uptake API methods for new functionality and improve existing API for performance.',
+          'Partnered with back-end team to design and uptake new API methods and improve performance of existing methods.',
       },
       {
         id: 4,
         content:
-          'Largely reduced dependency on deprecated JTwig templating by rebuilding features as efficient, reusable components and service methods.',
+          'Significantly reduced reliance on deprecated middleware by rebuilding features into reusable components and services.',
+      },
+      {
+        id: 4.5,
+        content:
+          'Owned full lifecycle for my projects by managing requirements, design, documentation, and support beyond the implementation.',
       },
       {
         id: 5,
         content:
-          'Participated in intensive testing culture, using Jasmine and WebdriverIO to achieve high coverage results in unit and e2e tests and improve code quality.',
+          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites.',
       },
       {
         id: 6,
         content:
-          'Mentored interns and junior engineers, acting as a lead on projects and driving pair programming + code review sessions to encourage teamwork and knowledge sharing.',
+          'Mentored junior engineers, driving pair programming and code review sessions to encourage teamwork and knowledge sharing.',
       },
       {
         id: 7,
         content:
-          'Became a "go-to" team member and project lead by demonstrating consistent quality, showing forward-thinking, and taking feedback seriously.',
+          'Recognized as a "go-to" team member and project lead by learning quickly, being flexible, demonstrating consistent quality, showing forward-thinking, and taking feedback seriously.',
       },
     ],
   },
@@ -149,7 +154,7 @@ const Employment: React.FC = () => {
             </span>
             <span>{data.dates}</span>
           </div>
-          <ul className="list-disc pl-6 text-sm">
+          <ul className="list-disc pl-4 text-sm">
             {data.bullets.map((bullet) => {
               return typeof bullet.content === 'string' ? (
                 <li key={bullet.id}>{bullet.content}</li>
