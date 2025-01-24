@@ -25,55 +25,55 @@ const IndexPage: React.FC<PageProps> = () => {
           </p>
           <p className="px-2 py-1">Here's my professional pitch:</p>
           <p className="px-2 py-1">
-            I am a passionate and skilled developer driven by the challenge of
-            turning ideas into impactful products. With a strong focus on
-            collaboration, technical innovation, and creating user-friendly
-            systems, I thrive on building solutions that make a real-world
-            impact. My work is guided by a commitment to excellence,
-            adaptability, and continuous improvement.
+            As a maker at heart, I thrive on transforming ideas into impactful,
+            user-centered products. I am eager to join an innovative workplace
+            where I can have fun solving important problems alongside a
+            dedicated team that help each other to grow. I hope to contribute my
+            focus on collaboration, quality, and continuous improvement to a
+            meaningful project that will drive positive change.
           </p>
           <p className="px-2 py-1">
             Throughout my career, I have built a reputation as a dependable and
             collaborative engineer who takes ownership of projects from initial
-            design to rollout and beyond. I value fostering a team environment
-            grounded in mutual learning and trust. I enjoy mentoring junior
-            engineers and peers through constructive code reviews and peer
-            programming, emphasizing both team performance and individual
-            growth. By prioritizing strong relationships and feedback ecosystems
-            in diverse groups, I aim to deliver the best possible products for
-            all users. My approach involves maintaining open and broad
-            communication channels to ensure decisions are informed,
+            design to rollout and beyond. I value a team environment grounded in
+            mutual learning and trust. I promote constructive code reviews and
+            peer programming as a means to achieve higher team performance and
+            individual growth. By prioritizing strong relationships and feedback
+            ecosystems in diverse groups, I aim to deliver the best possible
+            products for all users. My approach involves maintaining open and
+            broad communication channels to ensure decisions are informed,
             transparent, and aligned with user needs, while staying adaptable to
             evolving requirements through iterative development.
           </p>
           <p className="px-2 py-1">
-            Building on this foundation of teamwork, I can apply my technical
-            skills to produce powerful results. I am well-versed in driving
-            product direction for highly interactive and impactful UI features
-            within data-heavy, enterprise-scale codebases. I have a keen eye for
-            detail and enjoy combining my technical skills with design knowledge
-            to create elegant and efficient interfaces. I am also experienced in
-            implementing accessibility standards to ensure inclusivity across a
-            platform. Along with producing an outstanding end user experience I
-            also prioritize my fellow developers as I implement maintainable and
-            extensible systems with high quality code standards.
+            Building on this foundation of teamwork and flexibility, I can apply
+            my technical skills to produce powerful results. I am well-versed in
+            driving product direction for highly interactive and impactful UI
+            features within data-heavy, enterprise-scale applications. I have a
+            keen eye for detail and enjoy combining my technical skills with
+            design knowledge to create elegant and efficient interfaces. I am
+            also experienced in implementing accessibility standards to ensure
+            inclusivity across a platform. Along with producing an outstanding
+            end user experience I also prioritize my fellow developers as I
+            implement maintainable and extensible systems with high quality code
+            standards and documentation.
           </p>
           <p className="px-2 py-1">
-            While my recent professional experience has focused on Angular,
-            TypeScript, HTML, and CSS, I have a solid understanding of
-            component-based UI architecture and am confident in my ability to
-            quickly adapt to other frameworks and technologies. My history of
-            extensive collaboration with back-end engineers to develop and
-            uptake efficient APIs leaves me prepared to take on server-side
-            responsibilities too. Furthermore, my hands-on experience includes
-            Git, AI prompting, CI/CD practices, and unit and E2E testing
-            frameworks. In all, my goal is to continually grow as a developer
-            while delivering meaningful technical contributions that align with
-            user and business needs.
+            My recent professional work has focused on frontend responsibilities
+            using Angular + RxJS. I've built an expertise in component-based UI
+            as well as complex asynchronous system architecture and I am
+            confident in my ability to quickly adapt to other frameworks and
+            technologies. My history of extensive collaboration with back-end
+            engineers to develop and uptake efficient APIs leaves me prepared to
+            take on server-side responsibilities too. Furthermore, my hands-on
+            experience includes React, Next.js, Vercel, Git, AI prompting, CI/CD
+            practices, and unit and E2E testing frameworks. In all, my goal is
+            to continually grow as a developer while delivering meaningful
+            technical contributions that align with user and business needs.
           </p>
           <p className="px-2 py-1">
             Outside of all of that, I like to get out hiking, backpacking,
-            biking, skiing, travelling, and making gear for those activities. Of
+            biking, skiing, traveling, and making gear for those activities. Of
             course I also enjoy music, video games, film, and tv and I'm trying
             to read more.
           </p>

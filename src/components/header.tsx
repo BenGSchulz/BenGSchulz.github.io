@@ -39,8 +39,8 @@ const headerLinkData = [
   },
   {
     id: 4,
-    text: 'Jackson, WY',
-    link: 'https://maps.app.goo.gl/CTZTZcRjVkG4j2d26',
+    text: 'Seattle, WA',
+    link: 'https://maps.app.goo.gl/pzRbPJrHYxc5HGiF7',
     icon: faMapMarkerAlt,
   },
 ];
