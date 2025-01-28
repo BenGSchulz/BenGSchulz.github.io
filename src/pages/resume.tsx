@@ -15,7 +15,7 @@ const ResumePage: React.FC<PageProps> = () => {
           <Employment />
 
           {/* Education */}
-          <div className="flex flex-col pt-4 gap-2">
+          <div className="flex flex-col pt-2 gap-2">
             <div className="text-2xl border-b border-current">EDUCATION</div>
             <div>
               <div className="flex flex-col md:flex-row md:justify-between text-base md:text-lg print:flex-row print:justify-between print:text-lg">
@@ -37,35 +37,49 @@ const ResumePage: React.FC<PageProps> = () => {
             <div>
               <a
                 className="text-lg underline"
-                href="https://github.com/BenGSchulz/WebCookbook"
+                href="https://aibenschulzdev.vercel.app/"
+                target="_blank"
               >
-                Recipe Sharing SPA
+                Personal Advocate Chatbot
               </a>
               <ul className="list-disc pl-4 text-sm">
                 <li>
-                  Full-stack SPA built with Mongo, Express, Angular, Node.
+                  Built my own professional advocate using retrieval-augmented
+                  generation powered by Next.js, Vercel AI + OpenAI, and Neon
+                  Postgres + Drizzle ORM.
                 </li>
-                <li>Responsive front-end implemented with Bootstrap UI.</li>
-                <li>Utilized Docker + Compose for containerization.</li>
+                <li>
+                  Utilized pgvector and OpenAI embeddings API for efficient
+                  content embedding, enabling real-time contextual
+                  conversations.
+                </li>
+                <li>
+                  Designed a fluid interface using Tailwind CSS and Motion
+                  animations, ensuring an engaging user experience.
+                </li>
               </ul>
             </div>
             <div>
               <a
                 className="text-lg underline"
                 href="https://sundy.itch.io/blankcanvas"
+                target="_blank"
               >
                 Blank Canvas
               </a>
               <ul className="list-disc pl-4 text-sm">
                 <li>
-                  Developed full game from concept pitch to beta release in
-                  Unreal Engine 4.
+                  Designed and developed a game alongside a small team using
+                  Unreal Engine 4 with C++ and Blueprints.
                 </li>
                 <li>
                   Tackled a variety of design + engineering roles: Gameplay, AI,
                   UI, animations, audio, level design, and story development.
                 </li>
-                <li>Presented game with live demo at capstone showcase.</li>
+                <li>
+                  Presented a live beta showcase, demonstrating the ability to
+                  take a complex project from ideation to polished execution.
+                </li>
               </ul>
             </div>
           </div>
@@ -74,15 +88,16 @@ const ResumePage: React.FC<PageProps> = () => {
           <div className="flex flex-col pt-4 gap-2">
             <div className="text-2xl border-b border-current">SKILLS</div>
             <ul className="list-disc pl-4 text-sm">
-              <li>TypeScript/JavaScript, HTML+CSS, Java, C++</li>
+              <li>TypeScript, JavaScript, HTML, CSS, Java, C++</li>
               <li>
-                Angular, RxJS, React, Node.js/Express, MongoDB/Mongoose,
-                Jasmine, WebDriverIO, Jest/Enzyme, Git+GitHub, Jenkins
+                Angular, RxJS, React.js, Next.js, Tailwind, Node.js, Express,
+                MongoDB, Mongoose, Jasmine, WebDriverIO, Jest, Enzyme, Git,
+                GitHub, Jenkins
               </li>
               <li>
-                System Architecture, Project Management, Mentoring, Agile, Jira,
-                Confluence, Written+Verbal Communication, Collaborative Problem
-                Solving
+                System Architecture, Project Management, Accessibility,
+                Mentoring, Agile, Jira, Confluence, Figma, Draw.io,
+                Communication, Collaborative Problem Solving
               </li>
             </ul>
           </div>

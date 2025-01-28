@@ -16,9 +16,20 @@ const IndexPage: React.FC<PageProps> = () => {
             You've reached the personal website of Ben Schulz. In the spirit of
             prototyping and iteration, this is a placeholder to give you an
             introduction to myself and my background while I develop a more
-            interactive and detailed experience. Stay tuned to see what I am
-            cooking up :) You can also check out the V1 of my website here:{' '}
-            <a href="https://benschulz.dev/WebsiteV1/" className="underline">
+            interactive and detailed experience. Stay tuned to see what I am{' '}
+            <a
+              href="https://aibenschulzdev.vercel.app/"
+              className="underline"
+              target="_blank"
+            >
+              cooking up
+            </a>{' '}
+            :) You can also check out the V1 of my website here:{' '}
+            <a
+              href="https://benschulz.dev/WebsiteV1/"
+              className="underline"
+              target="_blank"
+            >
               benschulz.dev V1
             </a>
             .

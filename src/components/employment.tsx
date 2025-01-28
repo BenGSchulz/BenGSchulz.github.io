@@ -23,7 +23,7 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Drove product direction and execution of feature-rich, user-friendly interfaces delivering impact to internal and end users.',
+          'Drove product direction and execution of feature-rich, user-centric interfaces delivering impact to internal and end users.',
       },
       {
         id: 0.5,
@@ -36,19 +36,9 @@ const employmentData: Array<EmploymentData> = [
           'Spearheaded long-term re-architecture of critical features with a focus on improving performance, capabilities, and code standards.',
       },
       {
-        id: 2,
-        content:
-          'Proactively collaborated with stakeholders to achieve confidence in implementation as requirements evolve through project lifecycle.',
-      },
-      {
-        id: 3,
-        content:
-          'Partnered with back-end team to design and uptake new API methods and improve performance of existing methods.',
-      },
-      {
         id: 4,
         content:
-          'Significantly reduced reliance on deprecated middleware by rebuilding features into reusable components and services.',
+          'Reduced technical debt by modernizing legacy middleware into reusable components, achieving 80% reduction in served file size.',
       },
       {
         id: 4.5,
@@ -59,6 +49,16 @@ const employmentData: Array<EmploymentData> = [
         id: 5,
         content:
           'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites.',
+      },
+      {
+        id: 2,
+        content:
+          'Proactively collaborated with stakeholders to achieve confidence in implementation as requirements evolve through project lifecycle.',
+      },
+      {
+        id: 3,
+        content:
+          'Partnered with back-end team to design and uptake enhanced API methods, decreasing payload sizes up to 90%.',
       },
       {
         id: 6,

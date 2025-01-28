@@ -4,7 +4,7 @@ const PaperFloatWrapper: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   return (
-    <div className="flex pt-2 pb-2">
+    <div className="flex pt-2 pb-2 print:p-0">
       {/* Left Filler */}
       <div className="flex-1" />
 
