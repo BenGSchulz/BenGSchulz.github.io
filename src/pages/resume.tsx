@@ -91,13 +91,13 @@ const ResumePage: React.FC<PageProps> = () => {
               <li>TypeScript, JavaScript, HTML, CSS, Java, C++</li>
               <li>
                 Angular, RxJS, React.js, Next.js, Tailwind, Node.js, Express,
-                MongoDB, Mongoose, Jasmine, WebDriverIO, Jest, Enzyme, Git,
-                GitHub, Jenkins
+                Jasmine, WebDriverIO, Jest, Enzyme, Webpack, Git, GitHub,
+                Jenkins, Jira, Confluence, Figma, Draw.io
               </li>
               <li>
-                System Architecture, Project Management, Accessibility,
-                Mentoring, Agile, Jira, Confluence, Figma, Draw.io,
-                Communication, Collaborative Problem Solving
+                System Architecture, Asynchronous Programming, Accessibility,
+                Fluid Design, Project Management, Technical Mentorship,
+                Communication, Collaborative Problem Solving, Agile Methodology
               </li>
             </ul>
           </div>

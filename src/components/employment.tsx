@@ -23,12 +23,12 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Drove product direction and execution of feature-rich, user-centric interfaces delivering impact to internal and end users.',
+          'Drove product direction and execution of scalable, event-driven systems powering a no-code enterprise application platform.',
       },
       {
         id: 0.5,
         content:
-          'Built expertise in TypeScript + RxJS to develop data-driven, enterprise-scale systems within an Angular codebase.',
+          'Built expertise using TypeScript + RxJS to develop sustainable, feature-rich UI components for diverse audiences.',
       },
       {
         id: 1,
@@ -75,24 +75,24 @@ const employmentData: Array<EmploymentData> = [
   {
     id: 1,
     company: 'SPOTPOST',
-    title: 'Software Developer Intern',
+    title: 'Software Development Intern',
     location: 'Denver, CO / Remote',
     dates: 'Feb. 2019 - Jul. 2019',
     bullets: [
       {
         id: 0,
         content:
-          'Built a product from the ground up as part of a small cross-functional team.',
+          'Built a product from the ground up with a cross-functional team, collaborating on design, architecture, and implementation.',
       },
       {
         id: 1,
         content:
-          'Designed RESTful API methods and implemented the front-end onboarding flow for a web app using React.',
+          'Designed RESTful API methods and implemented the front-end authentication flow using React + JWT, ensuring secure user access.',
       },
       {
         id: 2,
         content:
-          'Conceptualized new product features and process optimizations for the engineering team.',
+          'Proposed new product features and process optimizations, streamlining workflows and enhancing engineering efficiency.',
       },
     ],
   },
@@ -117,7 +117,8 @@ const employmentData: Array<EmploymentData> = [
               className: 'underline',
             },
             'Class Page'
-          )
+          ),
+          '.'
         ),
       },
       {
