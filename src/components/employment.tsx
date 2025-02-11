@@ -16,7 +16,7 @@ const employmentData: Array<EmploymentData> = [
   {
     id: 0,
     company: 'NEXTWORLD',
-    title: 'Frontend Software Engineer 2',
+    title: 'Software Engineer 2',
     location: 'Denver, CO',
     dates: 'Nov. 2019 - Jun. 2024',
     bullets: [

@@ -44,9 +44,8 @@ const ResumePage: React.FC<PageProps> = () => {
               </a>
               <ul className="list-disc pl-4 text-sm">
                 <li>
-                  Built my own professional advocate using retrieval-augmented
-                  generation powered by Next.js, Vercel AI + OpenAI, and Neon
-                  Postgres + Drizzle ORM.
+                  Built my own professional advocate using RAG powered by
+                  Next.js, Vercel AI + OpenAI, and Neon Postgres + Drizzle ORM.
                 </li>
                 <li>
                   Utilized pgvector and OpenAI embeddings API for efficient
@@ -56,6 +55,10 @@ const ResumePage: React.FC<PageProps> = () => {
                 <li>
                   Designed a fluid interface using Tailwind CSS and Motion
                   animations, ensuring an engaging user experience.
+                </li>
+                <li>
+                  Leveraged SSR and streaming to optimize performance and SEO
+                  with quick-to-load, indexable pages.
                 </li>
               </ul>
             </div>
@@ -95,9 +98,10 @@ const ResumePage: React.FC<PageProps> = () => {
                 Jenkins, Jira, Confluence, Figma, Draw.io
               </li>
               <li>
-                System Architecture, Asynchronous Programming, Accessibility,
-                Fluid Design, Project Management, Technical Mentorship,
-                Communication, Collaborative Problem Solving, Agile Methodology
+                System Architecture, Asynchronous Programming, Web Performance
+                Optimization, Debugging, Accessibility, Fluid Design, Project
+                Management, Technical Mentorship, Communication, Collaborative
+                Problem Solving, Agile Methodology
               </li>
             </ul>
           </div>
