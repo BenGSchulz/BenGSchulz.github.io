@@ -15,10 +15,10 @@ type EmploymentData = {
 const employmentData: Array<EmploymentData> = [
   {
     id: 0,
-    company: 'NEXTWORLD',
+    company: 'Nextworld',
     title: 'Software Engineer 2',
     location: 'Denver, CO',
-    dates: 'Nov. 2019 - Jun. 2024',
+    dates: 'Nov 2019 – Jun 2024',
     bullets: [
       {
         id: 0,
@@ -74,10 +74,10 @@ const employmentData: Array<EmploymentData> = [
   },
   {
     id: 1,
-    company: 'SPOTPOST',
+    company: 'Spotpost',
     title: 'Software Development Intern',
     location: 'Denver, CO / Remote',
-    dates: 'Feb. 2019 - Jul. 2019',
+    dates: 'Feb 2019 – Jul 2019',
     bullets: [
       {
         id: 0,
@@ -98,10 +98,10 @@ const employmentData: Array<EmploymentData> = [
   },
   {
     id: 2,
-    company: 'DSST PUBLIC SCHOOLS',
+    company: 'DSST Public Schools',
     title: 'Creative Coding Elective Teacher',
     location: 'Denver, CO',
-    dates: 'Aug. 2018 - Nov. 2018',
+    dates: 'Aug 2018 – Nov 2018',
     bullets: [
       {
         id: 0,
@@ -137,23 +137,21 @@ const employmentData: Array<EmploymentData> = [
 
 const Employment: React.FC = () => {
   return (
-    <div className="flex flex-col gap-2 pt-4">
-      <div className="text-2xl border-b border-current">EXPERIENCE</div>
+    <>
       {employmentData.map((data) => (
         <div key={data.id}>
-          <div className="flex flex-col md:flex-row print:flex-row md:justify-between print:justify-between text-base md:text-lg print:text-lg">
+          <div className="flex flex-col md:flex-row print:flex-row md:justify-between print:justify-between text-base">
             <span className="flex flex-col md:inline print:inline">
-              <span>
-                {data.company}
-                <span className="hidden md:inline print:inline">, </span>
+              <span className="font-semibold">{data.company}</span>
+
+              <span className="hidden md:inline print:inline">, </span>
+              <span className="italic">{data.title}</span>
+              <span className="text-sm">
+                <span className="hidden md:inline print:inline"> - </span>
+                {data.location}
               </span>
-              <span className="italic">
-                {data.title}
-                <span className="hidden md:inline print:inline"> : </span>
-              </span>
-              <span>{data.location}</span>
             </span>
-            <span>{data.dates}</span>
+            <span className="text-base">{data.dates}</span>
           </div>
           <ul className="list-disc pl-4 text-sm">
             {data.bullets.map((bullet) => {
@@ -166,7 +164,7 @@ const Employment: React.FC = () => {
           </ul>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

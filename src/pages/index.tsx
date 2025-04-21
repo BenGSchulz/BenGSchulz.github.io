@@ -10,9 +10,9 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <PaperFloatWrapper>
         <Header navValue={Section.About} />
-        <main className="flex flex-col pt-4 gap-2">
-          <p className="px-2 py-1">To Whom It May Concern,</p>
-          <p className="px-2 py-1">
+        <main className="flex flex-col pt-2 gap-2">
+          <p className="px-2 pt-1">To Whom It May Concern,</p>
+          <p className="px-2 pt-1">
             You've reached the personal website of Ben Schulz. In the spirit of
             prototyping and iteration, this is a placeholder to give you an
             introduction to myself and my background while I develop a more
@@ -34,8 +34,8 @@ const IndexPage: React.FC<PageProps> = () => {
             </a>
             .
           </p>
-          <p className="px-2 py-1">Here's my professional pitch:</p>
-          <p className="px-2 py-1">
+          <p className="px-2 pt-1">Here's my professional pitch:</p>
+          <p className="px-2 pt-1">
             As a maker at heart, I thrive on transforming ideas into impactful,
             user-centered products. I am eager to join an innovative workplace
             where I can have fun solving important problems alongside a
@@ -43,33 +43,38 @@ const IndexPage: React.FC<PageProps> = () => {
             focus on collaboration, quality, and continuous improvement to a
             meaningful project that will drive positive change.
           </p>
-          <p className="px-2 py-1">
+          <p className="px-2 pt-1">
             Throughout my career, I have built a reputation as a dependable and
             collaborative engineer who takes ownership of projects from initial
-            design to rollout and beyond. I value a team environment grounded in
-            mutual learning and trust. I promote constructive code reviews and
-            peer programming as a means to achieve higher team performance and
-            individual growth. By prioritizing strong relationships and feedback
-            ecosystems in diverse groups, I aim to deliver the best possible
-            products for all users. My approach involves maintaining open and
-            broad communication channels to ensure decisions are informed,
-            transparent, and aligned with user needs, while staying adaptable to
-            evolving requirements through iterative development.
+            design to rollout and beyond. My experience teaching creative coding
+            to high school students and mentoring junior engineers at Nextworld
+            has helped to hone my ability to communicate complex concepts
+            clearly and adapt collaborative approaches to diverse audiences. I
+            aim to deliver the best possible products for all users by engaging
+            with teammates and cross-functional stakeholders to establish robust
+            feedback ecosystems that uphold high standards for quality. My
+            process involves maintaining open and broad communication channels
+            to ensure decisions are informed, transparent, and aligned with both
+            user and business needs, while staying adaptable to evolving
+            requirements through iterative development.
           </p>
-          <p className="px-2 py-1">
+          <p className="px-2 pt-1">
             Building on this foundation of teamwork and flexibility, I can apply
             my technical skills to produce powerful results. I am well-versed in
             driving product direction for highly interactive and impactful UI
-            features within data-heavy, enterprise-scale applications. I have a
-            keen eye for detail and enjoy combining my technical skills with
-            design knowledge to create elegant and efficient interfaces. I am
-            also experienced in implementing accessibility standards to ensure
-            inclusivity across a platform. Along with producing an outstanding
-            end user experience I also prioritize my fellow developers as I
-            implement maintainable and extensible systems with high quality code
-            standards and documentation.
+            features within data-heavy, enterprise-scale applications, as
+            demonstrated when I modernized legacy templating middleware into
+            reusable components that achieved an 80% reduction in served file
+            size and consequently a 2x improvement to LCP. I have a keen eye for
+            detail and enjoy combining my technical skills with design knowledge
+            to create elegant and efficient interfaces. I am also experienced in
+            implementing a11y and i18n standards to ensure inclusivity across a
+            platform. Along with producing an outstanding end user experience I
+            also prioritize my fellow developers as I implement maintainable and
+            extensible systems with high quality code standards and
+            documentation.
           </p>
-          <p className="px-2 py-1">
+          <p className="px-2 pt-1">
             My recent professional work has focused on frontend responsibilities
             using Angular + RxJS. I've built an expertise in component-based UI
             as well as complex asynchronous system architecture and I am
@@ -80,16 +85,16 @@ const IndexPage: React.FC<PageProps> = () => {
             experience includes React, Next.js, Vercel, Git, AI prompting, CI/CD
             practices, and unit and E2E testing frameworks. In all, my goal is
             to continually grow as a developer while delivering meaningful
-            technical contributions that align with user and business needs.
+            technical contributions that deliver exceptional outcomes.
           </p>
-          <p className="px-2 py-1">
+          <p className="px-2 pt-1">
             Outside of all of that, I like to get out hiking, backpacking,
             biking, skiing, traveling, and making gear for those activities. Of
             course I also enjoy music, video games, film, and tv and I'm trying
             to read more.
           </p>
-          <p className="px-2 pt-2">That's it for now.</p>
-          <p className="px-2 pt-2">Thanks for your attention,</p>
+          <p className="px-2 pt-1">That's it for now.</p>
+          <p className="px-2 pt-1">Thanks for your attention,</p>
           <p className="px-2">Ben Schulz</p>
         </main>
       </PaperFloatWrapper>

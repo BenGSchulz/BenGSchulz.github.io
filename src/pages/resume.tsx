@@ -12,31 +12,61 @@ const ResumePage: React.FC<PageProps> = () => {
       <PaperFloatWrapper>
         <Header navValue={Section.Resume} />
         <main>
-          <Employment />
-
-          {/* Education */}
-          <div className="flex flex-col pt-2 gap-2">
-            <div className="text-2xl border-b border-current">EDUCATION</div>
-            <div>
-              <div className="flex flex-col md:flex-row md:justify-between text-base md:text-lg print:flex-row print:justify-between print:text-lg">
-                <span>UNIVERSITY OF DENVER</span>
-                <span>Sep. 2015 - Mar. 2019</span>
-              </div>
-              <ul className="list-disc pl-4 text-sm">
-                <li>B.S. Computer Science - 3.9 GPA</li>
-                <li>Minors: Emergent Digital Practices, Mathematics</li>
-                <li>Dean's list and Hornsbeck Scholar</li>
-                <li>Outstanding First Year Writing Award</li>
-              </ul>
+          {/* Summary */}
+          <div className="flex flex-col gap-2 pt-2">
+            <div className="text-lg border-b border-current">SUMMARY</div>
+            <div className="text-sm">
+              Frontend Engineer with 5+ years of experience transforming complex
+              ideas into user-centered products through TypeScript, Angular, and
+              React in enterprise-scale applications. I take ownership of
+              projects from design to deployment, driving re-architecture
+              initiatives that significantly improve performance, accessibility,
+              and code maintainability while fostering team knowledge sharing.
+              Combining technical expertise with collaborative communication, I
+              build maintainable systems that prioritize both end-user
+              experience and developer workflow through comprehensive testing
+              and documentation. I am eager to apply my skills in [specific
+              technology/domain] to solve meaningful problems as part of a team
+              that values continuous learning and quality-driven development.
             </div>
           </div>
 
+          {/* Skills */}
+          <div className="flex flex-col pt-2 gap-2">
+            <div className="text-lg border-b border-current">SKILLS</div>
+            <ul className="list-disc pl-4 text-sm">
+              <li>
+                <span className="font-semibold">Languages:</span> TypeScript,
+                JavaScript, HTML, CSS, Java, C++
+              </li>
+              <li>
+                <span className="font-semibold">Frontend:</span> Angular, RxJS,
+                React.js, Next.js, Tailwind, Jasmine, WebDriverIO, Jest, Enzyme,
+                Webpack
+              </li>
+              <li>
+                <span className="font-semibold">Backend:</span> Node.js,
+                Express, REST APIs, GraphQL, PostgreSQL, MongoDB
+              </li>
+              <li>
+                <span className="font-semibold">Tools:</span> Git, GitHub, Zsh,
+                Jenkins, Jira, Confluence, Figma
+              </li>
+            </ul>
+          </div>
+
+          {/* Experience */}
+          <div className="flex flex-col gap-2 pt-2">
+            <div className="text-lg border-b border-current">EXPERIENCE</div>
+            <Employment />
+          </div>
+
           {/* Projects */}
-          <div className="flex flex-col pt-4 gap-2">
-            <div className="text-2xl border-b border-current">PROJECTS</div>
+          <div className="flex flex-col pt-2 gap-2">
+            <div className="text-lg border-b border-current">PROJECTS</div>
             <div>
               <a
-                className="text-lg underline"
+                className="text-base underline"
                 href="https://aibenschulzdev.vercel.app/"
                 target="_blank"
               >
@@ -64,7 +94,7 @@ const ResumePage: React.FC<PageProps> = () => {
             </div>
             <div>
               <a
-                className="text-lg underline"
+                className="underline"
                 href="https://sundy.itch.io/blankcanvas"
                 target="_blank"
               >
@@ -87,23 +117,23 @@ const ResumePage: React.FC<PageProps> = () => {
             </div>
           </div>
 
-          {/* Skills */}
-          <div className="flex flex-col pt-4 gap-2">
-            <div className="text-2xl border-b border-current">SKILLS</div>
-            <ul className="list-disc pl-4 text-sm">
-              <li>TypeScript, JavaScript, HTML, CSS, Java, C++</li>
-              <li>
-                Angular, RxJS, React.js, Next.js, Tailwind, Node.js, Express,
-                Jasmine, WebDriverIO, Jest, Enzyme, Webpack, Git, GitHub,
-                Jenkins, Jira, Confluence, Figma, Draw.io
-              </li>
-              <li>
-                System Architecture, Asynchronous Programming, Web Performance
-                Optimization, Debugging, Accessibility, Fluid Design, Project
-                Management, Technical Mentorship, Communication, Collaborative
-                Problem Solving, Agile Methodology
-              </li>
-            </ul>
+          {/* Education */}
+          <div className="flex flex-col pt-2 gap-2">
+            <div className="text-lg border-b border-current">EDUCATION</div>
+            <div className="flex flex-col md:flex-row print:flex-row md:justify-between print:justify-between text-base">
+              <span className="flex flex-col md:inline print:inline">
+                <span>
+                  University of Denver
+                  <span className="hidden md:inline print:inline">, </span>
+                </span>
+                <span className="italic">B.S. Computer Science</span>
+                <span className="hidden md:inline print:inline"> : </span>
+                <span className="text-sm italic">
+                  Emergent Digital Practices + Mathematics
+                </span>
+              </span>
+              <span className="text-base">Mar 2019</span>
+            </div>
           </div>
         </main>
       </PaperFloatWrapper>

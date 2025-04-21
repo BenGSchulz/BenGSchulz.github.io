@@ -56,21 +56,21 @@ function Header<NavType extends string>(
     <div>
       {/* Header */}
       <div className="flex flex-col items-start whitespace-nowrap border-b border-current md:flex-row md:justify-between md:items-end print:flex-row print:justify-between print:items-end">
-        <span className="text-3xl md:text-5xl print:text-5xl">BEN SCHULZ</span>
-        <span className="text-xl md:text-3xl print:text-3xl">
-          SOFTWARE DEVELOPER
+        <span className="text-3xl md:text-4xl print:text-4xl">Ben Schulz</span>
+        <span className="text-2xl md:text-3xl print:text-3xl">
+          Software Engineer
         </span>
       </div>
 
       {/* Links */}
-      <div className="flex items-center justify-between p-2 lg:p-1 print:p-1">
+      <div className="flex items-center justify-between p-1 pb-0">
         <a
           className="print:hidden flex gap-1 items-center"
           href={props.navValue === Section.About ? '/resume' : resume}
         >
           <FontAwesomeIcon
             icon={faFileDownload}
-            className="text-2xl lg:text-base print:text-base"
+            className="text-xl lg:text-base print:text-base"
           />
           <span className="hidden lg:inline">
             {props.navValue === Section.About ? 'Resume' : 'Download'}
@@ -80,7 +80,7 @@ function Header<NavType extends string>(
           <a className="print:hidden flex gap-1 items-center" href="/">
             <FontAwesomeIcon
               icon={faFaceSmile}
-              className="text-2xl lg:text-base print:text-base"
+              className="text-xl lg:text-base print:text-base"
             />
             <span className="hidden lg:inline">About</span>
           </a>
@@ -92,7 +92,7 @@ function Header<NavType extends string>(
         >
           <FontAwesomeIcon
             icon={faGlobe}
-            className="text-2xl lg:text-base print:text-base"
+            className="text-xl lg:text-base print:text-base"
           />
           <span className="hidden lg:inline print:inline">benschulz.dev</span>
         </a>
@@ -105,7 +105,7 @@ function Header<NavType extends string>(
           >
             <FontAwesomeIcon
               icon={item.icon}
-              className="text-2xl lg:text-base print:text-base"
+              className="text-xl lg:text-base print:text-base"
             />
             <span className="hidden lg:inline print:inline">{item.text}</span>
           </a>
