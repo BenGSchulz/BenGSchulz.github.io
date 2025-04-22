@@ -53,7 +53,7 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 7,
         content:
-          'Recognized as a "go-to" team member and project lead by mentoring junior engineers, driving pair programming and code review sessions, and participating in healthy feedback culture.',
+          'Recognized as a "go-to" team member and project lead by mentoring junior engineers, driving pair programming and code review sessions, and building a healthy feedback culture among cross-functional teams.',
       },
     ],
   },
