@@ -16,18 +16,19 @@ const ResumePage: React.FC<PageProps> = () => {
           <div className="flex flex-col gap-2 pt-2">
             <div className="text-lg border-b border-current">SUMMARY</div>
             <div className="text-sm">
-              Frontend Engineer with 5+ years of experience transforming complex
-              ideas into user-centered products through TypeScript, Angular, and
-              React in enterprise-scale applications. I take ownership of
-              projects from design to deployment, driving re-architecture
-              initiatives that significantly improve performance, accessibility,
-              and code maintainability while fostering team knowledge sharing.
-              Combining technical expertise with collaborative communication, I
-              build maintainable systems that prioritize both end-user
-              experience and developer workflow through comprehensive testing
-              and documentation. I am eager to apply my skills in [specific
-              technology/domain] to solve meaningful problems as part of a team
-              that values continuous learning and quality-driven development.
+              Frontend Engineer with 5 years of experience transforming complex
+              ideas into user-centered products using TypeScript, Angular, and
+              React in enterprise-scale applications and fast-paced startup
+              environments. I take ownership of projects from design to
+              deployment and beyond, driving high impact initiatives that
+              significantly improve performance, accessibility, and code
+              maintainability while fostering feedback ecosystems. Combining
+              technical expertise with collaborative communication, I build
+              maintainable systems that prioritize both end-user experience and
+              developer workflow through comprehensive testing and
+              documentation. I am eager to apply my skills to solve meaningful
+              problems as part of a team that values continuous learning and
+              quality-driven development.
             </div>
           </div>
 
@@ -41,12 +42,15 @@ const ResumePage: React.FC<PageProps> = () => {
               </li>
               <li>
                 <span className="font-semibold">Frontend:</span> Angular, RxJS,
-                React.js, Next.js, Tailwind, Jasmine, WebDriverIO, Jest, Enzyme,
-                Webpack
+                React.js, Next.js, Tailwind, Webpack, esbuild
+              </li>
+              <li>
+                <span className="font-semibold">Testing:</span> WebDriverIO,
+                Jasmine, Jest, Enzyme, Testing Library
               </li>
               <li>
                 <span className="font-semibold">Backend:</span> Node.js,
-                Express, REST APIs, GraphQL, PostgreSQL, MongoDB
+                Express, REST APIs, PostgreSQL, MongoDB
               </li>
               <li>
                 <span className="font-semibold">Tools:</span> Git, GitHub, Zsh,

@@ -62,17 +62,14 @@ const IndexPage: React.FC<PageProps> = () => {
             Building on this foundation of teamwork and flexibility, I can apply
             my technical skills to produce powerful results. I am well-versed in
             driving product direction for highly interactive and impactful UI
-            features within data-heavy, enterprise-scale applications, as
-            demonstrated when I modernized legacy templating middleware into
-            reusable components that achieved an 80% reduction in served file
-            size and consequently a 2x improvement to LCP. I have a keen eye for
-            detail and enjoy combining my technical skills with design knowledge
-            to create elegant and efficient interfaces. I am also experienced in
-            implementing a11y and i18n standards to ensure inclusivity across a
-            platform. Along with producing an outstanding end user experience I
-            also prioritize my fellow developers as I implement maintainable and
-            extensible systems with high quality code standards and
-            documentation.
+            features within data-heavy, enterprise-scale applications. I have a
+            keen eye for detail and enjoy combining my technical skills with
+            design knowledge to create elegant and efficient interfaces. I am
+            also experienced in implementing a11y and i18n standards to ensure
+            inclusivity across a platform. Along with producing an outstanding
+            end user experience I also prioritize my fellow developers as I
+            implement maintainable and extensible systems with high quality code
+            standards and documentation.
           </p>
           <p className="px-2 pt-1">
             My recent professional work has focused on frontend responsibilities

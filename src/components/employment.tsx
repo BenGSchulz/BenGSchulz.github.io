@@ -23,52 +23,37 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Drove product direction and execution of scalable, event-driven systems powering a no-code enterprise application platform.',
-      },
-      {
-        id: 0.5,
-        content:
-          'Built expertise using TypeScript + RxJS to develop sustainable, feature-rich UI components for diverse audiences.',
+          'Built expertise in Angular, TypeScript, and RxJS to drive product direction and execution of sustainable, feature-rich UI components and scalable, event-driven systems powering a no-code enterprise application platform.',
       },
       {
         id: 1,
         content:
-          'Spearheaded long-term re-architecture of critical features with a focus on improving performance, capabilities, and code standards.',
+          'Spearheaded long-term re-architecture of crucial features such as datatable infrastructure, advanced filtering components, and multi-step forms with a focus on improving performance, capabilities, and code standards.',
       },
       {
         id: 4,
         content:
-          'Reduced technical debt by modernizing legacy middleware into reusable components, achieving 80% reduction in served file size.',
-      },
-      {
-        id: 4.5,
-        content:
-          'Owned full lifecycle for my projects by managing requirements, design, documentation, and support beyond the implementation.',
+          'Achieved 2x improvement to LCP and reduced technical debt by modernizing legacy templating middleware into reusable and extensible components.',
       },
       {
         id: 5,
         content:
-          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites.',
-      },
-      {
-        id: 2,
-        content:
-          'Proactively collaborated with stakeholders to achieve confidence in implementation as requirements evolve through project lifecycle.',
+          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites and additionally implementing recorded interactions for no-code test automation.',
       },
       {
         id: 3,
         content:
-          'Partnered with back-end team to design and uptake enhanced API methods, decreasing payload sizes up to 90%.',
+          'Improved critical filtering response times by 30% after partnering with backend team to design and uptake enhanced API methods with a huge reduction in payload size.',
       },
       {
-        id: 6,
+        id: 3.5,
         content:
-          'Mentored junior engineers, driving pair programming and code review sessions to encourage teamwork and knowledge sharing.',
+          'Maintained WCAG AA standards and i18n compliance in all my work to ensure inclusivity across the platform, particularly identified the need for and implemented a standardized keyboard navigation framework for multifaceted interfaces.',
       },
       {
         id: 7,
         content:
-          'Recognized as a "go-to" team member and project lead by learning quickly, being flexible, demonstrating consistent quality, showing forward-thinking, and taking feedback seriously.',
+          'Recognized as a "go-to" team member and project lead by mentoring junior engineers, driving pair programming and code review sessions, and participating in healthy feedback culture.',
       },
     ],
   },
@@ -82,17 +67,17 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Built a product from the ground up with a cross-functional team, collaborating on design, architecture, and implementation.',
+          'Built a digital advertisement and bulletin board platform from the ground up with a cross-functional team.',
       },
       {
         id: 1,
         content:
-          'Designed RESTful API methods and implemented the front-end authentication flow using React + JWT, ensuring secure user access.',
+          'Designed RESTful API methods and implemented the frontend authentication flow using React + JWT, ensuring secure user access.',
       },
       {
         id: 2,
         content:
-          'Proposed new product features and process optimizations, streamlining workflows and enhancing engineering efficiency.',
+          'Proposed new product features, technologies, and process optimizations to improve team efficiency and product quality.',
       },
     ],
   },
