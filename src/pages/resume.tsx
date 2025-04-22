@@ -13,27 +13,22 @@ const ResumePage: React.FC<PageProps> = () => {
         <Header navValue={Section.Resume} />
         <main>
           {/* Summary */}
-          <div className="flex flex-col gap-2 pt-2">
+          <div className="flex flex-col gap-1 pt-1">
             <div className="text-lg border-b border-current">SUMMARY</div>
             <div className="text-sm">
               Frontend Engineer with 5 years of experience transforming complex
-              ideas into user-centered products using TypeScript, Angular, and
-              React in enterprise-scale applications and fast-paced startup
-              environments. I take ownership of projects from design to
-              deployment and beyond, driving high impact initiatives that
-              significantly improve performance, accessibility, and code
-              maintainability while fostering feedback ecosystems. Combining
-              technical expertise with collaborative communication, I build
-              maintainable systems that prioritize both end-user experience and
-              developer workflow through comprehensive testing and
-              documentation. I am eager to apply my skills to solve meaningful
-              problems as part of a team that values continuous learning and
-              quality-driven development.
+              ideas into user-centered products using modern web technologies. I
+              take ownership from requirements to rollout and beyond, driving
+              high-impact initiatives that serve diverse audiences. I combine
+              technical expertise with collaborative communication to build
+              maintainable systems that power exceptional experiences. Eager to
+              solve meaningful problems with a team that values continuous
+              learning and quality-driven development.
             </div>
           </div>
 
           {/* Skills */}
-          <div className="flex flex-col pt-2 gap-2">
+          <div className="flex flex-col pt-1 gap-1">
             <div className="text-lg border-b border-current">SKILLS</div>
             <ul className="list-disc pl-4 text-sm">
               <li>
@@ -60,13 +55,13 @@ const ResumePage: React.FC<PageProps> = () => {
           </div>
 
           {/* Experience */}
-          <div className="flex flex-col gap-2 pt-2">
+          <div className="flex flex-col gap-1 pt-1">
             <div className="text-lg border-b border-current">EXPERIENCE</div>
             <Employment />
           </div>
 
           {/* Projects */}
-          <div className="flex flex-col pt-2 gap-2">
+          <div className="flex flex-col pt-1 gap-1">
             <div className="text-lg border-b border-current">PROJECTS</div>
             <div>
               <a
@@ -122,7 +117,7 @@ const ResumePage: React.FC<PageProps> = () => {
           </div>
 
           {/* Education */}
-          <div className="flex flex-col pt-2 gap-2">
+          <div className="flex flex-col pt-1 gap-1">
             <div className="text-lg border-b border-current">EDUCATION</div>
             <div className="flex flex-col md:flex-row print:flex-row md:justify-between print:justify-between text-base">
               <span className="flex flex-col md:inline print:inline">
