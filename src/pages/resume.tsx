@@ -45,11 +45,11 @@ const ResumePage: React.FC<PageProps> = () => {
               </li>
               <li>
                 <span className="font-semibold">Backend:</span> Node.js,
-                Express, REST APIs, PostgreSQL, MongoDB
+                Express, REST APIs, GraphQL, PostgreSQL, MongoDB
               </li>
               <li>
                 <span className="font-semibold">Tools:</span> Git, GitHub, Zsh,
-                Jenkins, Jira, Confluence, Figma
+                Jenkins, Sonar, Lighthouse, Jira, Confluence, Figma
               </li>
             </ul>
           </div>

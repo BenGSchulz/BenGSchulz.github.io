@@ -23,7 +23,7 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 0,
         content:
-          'Built expertise in Angular, TypeScript, and RxJS to drive product direction and execution of sustainable, feature-rich UI components and scalable, event-driven systems powering a no-code enterprise application platform.',
+          'Built expertise in TypeScript, RxJS, and modern web frameworks to drive product direction and execution of sustainable, feature-rich UI components and scalable, event-driven systems powering a no-code enterprise application platform.',
       },
       {
         id: 1,
@@ -38,12 +38,12 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 5,
         content:
-          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites and additionally implementing recorded interactions for no-code test automation.',
+          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites with >80% coverage and additionally implementing recorded interactions for no-code test automation.',
       },
       {
         id: 3,
         content:
-          'Improved critical filtering response times by 30% after partnering with backend team to design and uptake enhanced API methods with a huge reduction in payload size.',
+          'Improved critical filtering response times by 30% through collaboration with backend teams to design optimized API methods with significant payload size reduction.',
       },
       {
         id: 3.5,
