@@ -28,7 +28,7 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 1,
         content:
-          'Spearheaded long-term re-architecture of crucial features such as datatable infrastructure, advanced filtering components, and multi-step forms with a focus on improving performance, capabilities, and code standards.',
+          'Spearheaded architecture overhaul of high-traffic, interaction-heavy datatable and form components, tackling technical debt while improving maintainability and extensibility with thorough documentation as well as increasing render performance by 50%.',
       },
       {
         id: 4,
@@ -38,12 +38,12 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 5,
         content:
-          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites with >80% coverage and additionally implementing recorded interactions for no-code test automation.',
+          'Exponent of intensive testing culture to achieve improved code quality, using Jasmine + WebdriverIO to build comprehensive suites with greater than 80% coverage and additionally implementing recorded interactions for no-code test automation.',
       },
       {
         id: 3,
         content:
-          'Improved critical filtering response times by 30% through collaboration with backend teams to design optimized API methods with significant payload size reduction.',
+          'Improved critical filtering response times by 30% through close collaboration with backend teams to design optimized API methods with significant payload size reduction.',
       },
       {
         id: 3.5,
