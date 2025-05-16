@@ -28,12 +28,12 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 1,
         content:
-          'Spearheaded architecture overhaul of high-traffic, interaction-heavy datatable and form components, tackling technical debt while improving maintainability and extensibility with thorough documentation as well as increasing render performance by 50%.',
+          'Spearheaded architecture overhaul of high-traffic, interaction-heavy datatable and filter components, tackling technical debt while improving maintainability with thorough testing and documentation on top of increasing render performance by 50%.',
       },
       {
         id: 4,
         content:
-          'Achieved 2x improvement to LCP and reduced technical debt by modernizing legacy templating middleware into reusable and extensible components.',
+          'Achieved 2x improvement to LCP and reduced technical debt by modernizing legacy templating into reusable and extensible components.',
       },
       {
         id: 5,
