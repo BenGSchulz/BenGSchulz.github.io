@@ -33,7 +33,7 @@ const employmentData: Array<EmploymentData> = [
       {
         id: 4,
         content:
-          'Achieved 2x improvement to LCP and reduced technical debt by modernizing legacy templating into reusable and extensible components.',
+          'Achieved 2x improvement to LCP and reduced technical debt by refactoring legacy code into reusable and extensible components.',
       },
       {
         id: 5,

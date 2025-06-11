@@ -18,12 +18,12 @@ const ResumePage: React.FC<PageProps> = () => {
             <div className="text-sm">
               Frontend Engineer with 5 years of experience transforming complex
               ideas into user-centered products using modern web technologies. I
-              take ownership from requirements to rollout and beyond, driving
-              high-impact initiatives that serve diverse audiences. I combine
-              technical expertise with collaborative communication to build
-              maintainable systems that power exceptional experiences. Eager to
-              solve meaningful problems with a team that values continuous
-              learning and quality-driven development.
+              take ownership from requirements through rollout and beyond,
+              driving high-impact initiatives that serve diverse audiences. I
+              combine technical expertise with collaborative communication to
+              build maintainable systems that power exceptional experiences.
+              Eager to solve meaningful problems with a mission-driven team that
+              values continuous learning and has a high standard for quality.
             </div>
           </div>
 
@@ -50,6 +50,13 @@ const ResumePage: React.FC<PageProps> = () => {
               <li>
                 <span className="font-semibold">Tools:</span> Git, GitHub, Zsh,
                 Jenkins, Sonar, Lighthouse, Jira, Confluence, Figma
+              </li>
+              <li>
+                <span className="font-semibold">Core Competencies:</span> System
+                Architecture, Async, OOP, FP, Performance Optimization,
+                Debugging, Accessibility, Project Management, Technical
+                Mentorship, Communication, Cross-functional Collaboration,
+                Attention to Detail, Agile Methodology
               </li>
             </ul>
           </div>
