@@ -10,40 +10,8 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as React from 'react';
 import { Section } from '../constants/section';
+import { useAudience } from '../context/AudienceContext';
 import resume from '../files/BenSchulzResume.pdf';
-
-const headerLinkData = [
-  {
-    id: 0,
-    text: 'BenGSchulz',
-    link: 'https://github.com/BenGSchulz',
-    icon: faGithub,
-  },
-  {
-    id: 1,
-    text: 'BenGSchulz',
-    link: 'https://linkedin.com/in/BenGSchulz',
-    icon: faLinkedin,
-  },
-  {
-    id: 2,
-    text: 'mail@benschulz.dev',
-    link: 'mailto:mail@benschulz.dev',
-    icon: faEnvelope,
-  },
-  {
-    id: 3,
-    text: '307-413-8377',
-    link: 'tel:307-413-8377',
-    icon: faPhone,
-  },
-  {
-    id: 4,
-    text: 'Seattle, WA',
-    link: 'https://maps.app.goo.gl/pzRbPJrHYxc5HGiF7',
-    icon: faMapMarkerAlt,
-  },
-];
 
 type HeaderProps<NavType extends string> = {
   navValue: NavType;
@@ -52,13 +20,17 @@ type HeaderProps<NavType extends string> = {
 function Header<NavType extends string>(
   props: React.PropsWithChildren<HeaderProps<NavType>>
 ) {
+  const { config } = useAudience();
+
   return (
     <div>
       {/* Header */}
       <div className="flex flex-col items-start whitespace-nowrap border-b border-current md:flex-row md:justify-between md:items-end print:flex-row print:justify-between print:items-end">
-        <span className="text-3xl md:text-4xl print:text-4xl">Ben Schulz</span>
+        <span className="text-3xl md:text-4xl print:text-4xl">
+          {config.title}
+        </span>
         <span className="text-2xl md:text-3xl print:text-3xl">
-          Software Engineer
+          {config.subtitle}
         </span>
       </div>
 
@@ -96,7 +68,7 @@ function Header<NavType extends string>(
           />
           <span className="hidden lg:inline print:inline">benschulz.dev</span>
         </a>
-        {headerLinkData.map((item) => (
+        {config.headerLinks.map((item) => (
           <a
             key={item.id}
             href={item.link}
